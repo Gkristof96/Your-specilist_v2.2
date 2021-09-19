@@ -1,14 +1,19 @@
 import { useSelector } from "react-redux";
-import { Fragment } from "react";
-import ReactDOM from "react-dom";
 import { NavLink, Link } from "react-router-dom";
 import style from "./SideDrawer.module.scss";
 
-const DrawerOverlay = () => {
+const SideDrawer = (props) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
+
+  const closeDrawerHandler = () => {
+    props.onToggleDrawer()
+  }
   return (
-    <ul className={style["side-drawer"]}>
+    <ul
+      className={`${style['side-drawer']} ${props.isDrawerOpen && style.open}`}
+      onClick={closeDrawerHandler}
+    >
       <li>
         <NavLink activeClassName={style.active} exact={true} to="/">
           Főoldal
@@ -42,17 +47,6 @@ const DrawerOverlay = () => {
         </li>
       )}
     </ul>
-  );
-};
-
-const SideDrawer = () => {
-  return (
-    <Fragment>
-      {ReactDOM.createPortal(
-        <DrawerOverlay />,
-        document.getElementById("sidedrawer-root")
-      )}
-    </Fragment>
   );
 };
 

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { Suspense } from "react";
 import "./styles/App.scss";
 
-import MainLayout from "./components/Layout/MainLayout";
+import Layout from "./components/Layout/Layout";
 import Loader from "./components/UI/Loader";
 
 const HomeScreen = React.lazy(() => import("./screens/HomeScreen"));
@@ -26,7 +26,7 @@ const AuthScreen = React.lazy(() => import("./screens/AuthScreen"));
 const App = () => {
   return (
     <Router>
-      <MainLayout>
+      <Layout>
         <Suspense fallback={<Loader size="full" />}>
           <Switch>
             <Route path="/" exact>
@@ -61,7 +61,7 @@ const App = () => {
             </Route>
           </Switch>
         </Suspense>
-      </MainLayout>
+      </Layout>
     </Router>
   );
 };

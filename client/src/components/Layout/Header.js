@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import style from "./Header.module.scss";
@@ -8,12 +7,7 @@ import ProfileButton from "../Profile/ProfileButton";
 
 import { logout } from "../../actions/userActions";
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenuHandler = () => {
-    setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
-  };
+const Header = (props) => {
 
   const dispatch = useDispatch();
 
@@ -25,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header className={`${props.isDrawerOpen && style.open}`}>
       <Link to="/" className={style.logo}>
         <img src="/images/logo.webp" alt="Logo of the website" />
         <h1>Your Specialist</h1>
@@ -63,8 +57,8 @@ const Header = () => {
       </div>
       <div className={style["hamburger-btn"]}>
         <HamburgerButton
-          isMenuOpen={isMenuOpen}
-          onToggleMenu={toggleMenuHandler}
+          isDrawerOpen={props.isDrawerOpen}
+          onToggleDrawer={props.onToggleDrawer}
         />
       </div>
     </header>
