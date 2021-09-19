@@ -1,0 +1,118 @@
+@use '../../styles/abstracts' as *;
+
+.provider-card {
+  transform: translateX(150px);
+  background-color: $container-background;
+  width: calc(100% - 150px);
+  height: auto;
+  min-height: 350px;
+  padding: 25px;
+  padding-left: 175px;
+  margin-bottom: 50px;
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.025) translateX(150px);
+  }
+
+  img {
+    width: 300px;
+    border-radius: 50%;
+    position: absolute;
+    border: 5px solid $input-background;
+    left: -150px;
+    top: 25px;
+  }
+
+  .provider-info {
+    padding-left: 25px;
+    .header {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        font-weight: 500;
+        font-size: clamp(18px, 2vw, 24px);
+        line-height: 29px;
+
+        color: $purple;
+        margin-bottom: 5px;
+      }
+
+      .rating {
+        display: flex;
+        align-items: center;
+        color: $dark-text;
+        .rating-stars {
+          margin: 0 10px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    h2 {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: $purple;
+      .icon {
+        margin-right: 5px;
+        color: $purple;
+      }
+      margin-bottom: 20px;
+    }
+    p {
+      font-weight: 300;
+      font-size: clamp(12px, 1vw, 16px);
+      color: $dark-text;
+      line-height: 20px;
+      text-align: justify;
+      margin-bottom: 25px;
+      max-height: 135px;
+      overflow: hidden;
+    }
+    .professions-bar {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .provider-card {
+    width: 100%;
+    height: auto;
+    transform: translateX(0);
+    padding: 25px;
+    flex-direction: column;
+
+    img {
+      width: 200px;
+      position: relative;
+      top: unset;
+      left: unset;
+      align-self: center;
+    }
+
+    .provider-info {
+      width: 100%;
+      padding-left: 0;
+    }
+    .provider-info .header,
+    .provider-info h2 {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and(max-width: 450px) {
+  .provider-card .provider-info .header .rating {
+    flex-direction: column;
+  }
+}

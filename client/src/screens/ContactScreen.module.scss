@@ -1,0 +1,57 @@
+@use '../styles/abstracts' as *;
+
+.leftbar {
+  width: 50%;
+
+  h1 {
+    font-weight: 500;
+    font-size: clamp(28px, 5vw, 48px);
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: clamp(14px, 2vw, 22px);
+    text-align: justify;
+    margin-bottom: 25px;
+  }
+
+  li {
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: clamp(14px, 2vw, 24px);
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin-right: 15px;
+      font-size: clamp(20px, 2vw, 32px);
+    }
+  }
+}
+
+.rightbar {
+  width: 50%;
+
+  form {
+    width: 60%;
+    margin: auto;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .leftbar,
+  .rightbar {
+    width: 100%;
+  }
+  .rightbar form {
+    width: 90%;
+  }
+  .leftbar {
+    margin-bottom: 25px;
+  }
+}

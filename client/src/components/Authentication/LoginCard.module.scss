@@ -1,0 +1,107 @@
+@use '../../styles/abstracts' as *;
+
+.login-card {
+  width: 400px;
+  height: auto;
+  background-color: $light-text;
+  border-radius: 10px;
+  padding: 0 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 30;
+  transform: translate(-50%, -50%);
+  align-items: center;
+
+  h1 {
+    font-weight: 500;
+    font-size: $title_2;
+    line-height: 80px;
+    text-align: center;
+    color: $purple;
+  }
+
+  .icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: $title_2;
+    color: $dark-text;
+    cursor: pointer;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      font-weight: 500;
+      font-size: 14px;
+      margin: 10px 0;
+    }
+    .checkbox {
+      width: 100%;
+      span {
+        margin-left: 5px;
+        font-size: $body;
+        span {
+          color: $purple;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .login-settings {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      label {
+        width: 50%;
+        font-weight: 600;
+        font-size: $body;
+        color: $purple;
+        span {
+          margin-left: 5px;
+        }
+      }
+
+      a {
+        text-align: right;
+        font-weight: 600;
+        font-size: $body;
+        line-height: 55px;
+
+        color: $purple;
+      }
+    }
+  }
+  p {
+    font-weight: 300;
+    font-size: $body;
+    text-align: center;
+    margin: 10px 0;
+    margin-bottom: 25px;
+    a {
+      font-weight: 500;
+      font-size: $body;
+      color: $purple;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and(max-width: 450px) {
+  .login-card {
+    width: calc(100% - 20px);
+    form .checkbox span {
+      font-size: $caption;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@use '../../styles/abstracts' as *;
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px calc((100vw - 1400px) / 2);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+    h1 {
+      font-weight: bold;
+      font-size: clamp(14px, 1.75vw, 24px);
+      line-height: 36px;
+
+      color: $light-text;
+    }
+  }
+
+  .navigation {
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      li {
+        transition: 0.5s ease-in-out;
+        a {
+          text-decoration: none;
+          font-weight: 500;
+          font-size: clamp(12px, 1.25vw, 18px);
+          line-height: 22px;
+          padding: 0.25rem 1rem;
+          color: $light-text;
+
+          &.active {
+            font-size: clamp(14px, 1.25vw, 22px);
+          }
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+@media screen and(max-width: 1450px) {
+  header {
+    padding: 0 25px;
+  }
+}
+@media screen and(max-width: 768px) {
+  header {
+    .navigation {
+      display: none;
+    }
+    .hamburger-btn {
+      display: block;
+    }
+  }
+}

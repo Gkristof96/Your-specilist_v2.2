@@ -1,0 +1,17 @@
+.button-container {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  right: 50px;
+  top: 50px;
+}
+
+@media screen and(max-width: 768px) {
+  .button-container {
+    justify-content: center;
+    top: 125px;
+    right: 0;
+  }
+}

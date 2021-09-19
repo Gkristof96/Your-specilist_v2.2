@@ -1,0 +1,55 @@
+@use '../../../styles/abstracts' as *;
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+
+  .line {
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    background: $light-text;
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+
+    &:first-child,
+    &:last-child {
+      width: 15px;
+    }
+    &:first-child {
+      top: 0;
+      left: 0;
+    }
+    &:nth-child(2) {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    &:last-child {
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &.open {
+    .line {
+      &:first-child {
+        transform: translateX(2px) translateY(8px) rotate(405deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg) translate(1px, -1px);
+      }
+      &:last-child {
+        transform: translateX(-2px) translateY(-8px) rotate(405deg);
+      }
+    }
+  }
+}

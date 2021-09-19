@@ -1,0 +1,32 @@
+.modal {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffcccc;
+  color: #ff3333;
+  position: fixed;
+  border-radius: 10px;
+  top: 30px;
+  right: 30px;
+  z-index: 100;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+  .icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 5px;
+  }
+}
+
+.backdrop {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,65 @@
+@use '../../styles/abstracts' as *;
+
+.profession-list {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  h1 {
+    margin: 25px 0;
+    font-size: clamp(12px, 2vw, 24px);
+    color: $dark-text;
+  }
+
+  .professions {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      background: $purple;
+      color: $light-text;
+      margin: 10px;
+      padding: 0.5rem 2rem;
+      transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  .back-arrow {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: clamp(18px, 2vw, 36px);
+    color: $dark-text;
+    transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      color: $purple;
+    }
+  }
+}
+
+@media screen and(max-width: 1450px) {
+  .profession-list {
+    .professions {
+      a {
+        padding: 0.25rem 1.2rem;
+        font-size: 14px;
+      }
+    }
+    .back-arrow {
+      left: 15px;
+      top: 20px;
+    }
+  }
+}

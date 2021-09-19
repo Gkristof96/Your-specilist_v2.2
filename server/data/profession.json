@@ -1,0 +1,62 @@
+[
+    {
+        "category": "Állatok",
+        "image": "images/categories/category-1.png",
+        "professionList": ["Állatorvos", "Kutyakiképző", "Kutyakozmetikus"]
+    },
+    {
+        "category": "Egészség",
+        "image": "images/categories/category-2.png",
+        "professionList": ["Akupunktúra", "Bőrgyógyász", "Cellulit masszázs", "Családállítás", "Csontkovács", "Dietetikus", "Fogorvos", "Fogyasztó masszázs", "Gyermekorvos", "Gyógymasszázs", "Gyógytornász", "Házi betegápolás", "Háziorvos", "Homeopátia", "Kineziológus", "Kiropraktőr", "Lávaköves masszázs", "Manuálterápia", "Masszázs", "Mediátor", "Nőgyógyász", "Nyirokmasszázs", "Pszichiáter", "Pszichológus", "Svédmasszázs", "Szájsebész", "Talpmasszázs", "Természetgyógyász", "Thai masszázs"]
+    },
+    {
+        "category": "Üzlet",
+        "image": "images/categories/category-3.png",
+        "professionList": ["Dekoráció", "Designer","GDPR tanácsadó", "Grafikus", "Hostess", "Kockázatelemző", "Kontrolling tanácsadó", "Közjegyző", "Látványtervező", "Névjegykártya készítés", "Online marketing", "Pénztárgépszerelő", "Szövegíró, újságíró", "Titkárnő, asszisztens", "Tolmács, fordító", "Ügyvéd"]
+    },
+    {
+        "category": "Pénzügyek",
+        "image": "images/categories/category-4.png",
+        "professionList": ["Adótanácsadás", "Befektetési tanácsadó", "Biztosítási ügynök", "Hitelszakértő, pénzügyi tanácsadó", "Könyvelés"] 
+    },
+    {
+        "category": "Szállítás",
+        "image": "images/categories/category-5.png",
+        "professionList": ["Autómentés", "Daruzás", "Futárszolgálat", "Költöztetés", "Lomtalanítás", "Sofőrszolgálat", "Személyszállítás", "Teherfuvarozás"]
+    },
+    {
+        "category": "Informatika",
+        "image": "images/categories/category-6.png",
+        "professionList": ["Honlapkészítés", "Laptop szervíz", "Programozó", "Rendszergazda, informatikus", "Számítógép szervíz", "Telefonhálózatszerelő", "Telefonközpontszerelő", "Telefonszerelő"]
+    },
+    {
+        "category": "Ház, kert",
+        "image": "images/categories/category-7.png",
+        "professionList": ["Ablakcsere, nyílászáró beépítés", "Ablakszigetelés", "Ács", "Árnyékolástechnika","Asztalos", "Automata kapu", "Bádogos", "Bejárónő, házvezetőnő", "Belsőépítész", "Betonozás", "Burkoló", "Bútorasztalos", "Bútorszerelő", "Cserépkályha", "Duguláselhárítás", "Energetikai tanácsadás", "Energetikai tanúsítvány", "Építési műszaki ellenőr", "Építész", "Épületbontás", "Épületgépészet", "Esztergályos", "Ezermester", "Fakitermelő", "Földmérő, térképész", "Földmunka", "Fűtésszerelés", "Garázskapuszerelő", "Gázkészülék javítás", "Gázvezeték szerelő", "Generálkivitelezés", "Gipszkarton szerelés, Hang-, tető-, hőszigetelés", "Háztartási gép szervíz", "Hegesztés", "Hűtőgépszerelő", "Ingatlan értékbecslés", "Ingatlanfotózás", "Ingatlanközvetítő", "Ipari alpinista, ipari búvár", "Kábeltévés, antenna szerelő", "Kandallóépítő", "Kaputelefon szerelés", "Kárpitos", "Kárpittisztító", "Kávéfőzőszerelő", "Kéménybélelés, felújítás", "Kéményseprő", "Kertépítés", "Kertész", "Klímaszerelés", "Kőműves", "Kútfúrás", "Lakatos", "Lakberendező", "Melegburkoló, parkettázás", "Napelem, napkollektor", "Napelemszerelő", "Napkollektorszerelő", "Öntözéstechnika", "Radiátorszerelés", "Rágcsálóirtás, rovarirtás", "Redőny javítás", "Restaurátor", "Sittelszállítás", "Statikus", "Szalagfüggöny", "Szippantás", "Szobafestő, tapétázó", "Szőnyegtisztító", "Takarítás", "Társasházkezelés", "Térburkolat tisztítás", "Térkövezés", "Tetőfedő", "Uszodatechnika", "Üveges", "Villanyszerelő", "Vízszerelő", "Zárszerelés"]
+    },
+    {
+        "category": "Gyerekek, tanulás",
+        "image": "images/categories/category-8.png",
+        "professionList": ["Angoltanár", "Babysitter", "Fizikatanár", "Franciatanár", "Gitároktatás", "Gyógypedagógus", "Kémiatanár", "Magántanár", "Magyartanár", "Matektanár", "Némettanár", "Olasztanár", "Orosztanár", "Spanyoltanár", "Tánctanár"]
+    },
+    {
+        "category": "Szépségápolás",
+        "image": "images/categories/category-9.png",
+        "professionList": ["Fodrász, mesterfodrász", "Hajhosszabbítás", "Henna", "Kozmetikus", "Manikűr", "Műköröm", "Pedikűr", "Piercing", "Sminkes", "Sminktetoválás", "Szempilla hosszabbítás", "Testékszer", "Testfestő", "Tetoválás"]
+    },
+    {
+        "category": "Autó, motor",
+        "image": "images/categories/category-10.png",
+        "professionList": ["Autófényezés", "Autófóliázás", "Autókozmetika", "Autószerelő", "Autóüveg, szélvédő javítás", "Autóvillamosság", "Futómű beállítás", "Gumiszervíz", "Karosszéria lakatos", "Robogó, motor szervíz"]
+    },
+    {
+        "category": "Vendéglátás",
+        "image": "images/categories/category-11.png",
+        "professionList": ["Szakács", "Pultos", "Felszolgáló"]
+    },
+    {
+        "category": "Egyéb",
+        "image": "images/categories/category-12.png",
+        "professionList": ["Asztrológus", "Biztonságtechnika", "Bőrdíszműves", "Ceremóniamester, vőfély", "Cipész", "Coach", "Esküvői fotós", "Esküvői videós", "Esküvőszervező", "Fényképész, fotós", "Gépi hímzés", "Gravírozás", "Hangtechnika", "Jós", "Jósnő", "Képkeretezés", "Kerékpár szervíz", "Könyvkötő", "Kulcsmásolás", "Magánnyomozó", "Mobiltelefon szervíz", "Mosógépszerelő", "Munkavédelmi és tűzvédelmi szakember", "Órás", "Ötvös", "Rendezvényszervező", "Riasztó szerelés", "Sírkő", "Személyi edző", "Testőr, vagyonőr", "TV-, videó-, hifi-, DVD-szerelő", "Varrónő", "Videós, operatőr", "Vitorlakészítés"]
+    }
+]

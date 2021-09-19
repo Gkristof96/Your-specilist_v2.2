@@ -1,0 +1,76 @@
+@use '../../styles/abstracts' as *;
+
+.flat-input {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  margin: 10px 0;
+
+  &.high {
+    height: 110px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    height: 50px;
+    border: none;
+    padding-top: 20px;
+    outline: none;
+  }
+
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+
+  input:focus + .label-name .content-name,
+  input:valid + .label-name .content-name {
+    transform: translateY(-15px);
+    font-size: $title_2;
+    color: $purple;
+  }
+
+  textarea:focus + .label-name .content-name,
+  textarea:valid + .label-name .content-name {
+    transform: translateY(-75px);
+    font-size: $title_2;
+    color: $purple;
+  }
+
+  input:focus + .label-name::after,
+  textarea:focus + .label-name::after {
+    transform: translateX(0);
+  }
+
+  label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid $dark-text;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      bottom: -1px;
+      border-bottom: 3px solid $purple;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease;
+    }
+
+    .content-name {
+      position: absolute;
+      font-weight: 500;
+      left: 0;
+      bottom: 5px;
+      transition: transform 0.5s ease;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.background {
+  width: 100%;
+  background: transparent;
+  //background: url("../../images/background.jpg") center no-repeat;
+  //background-size: cover;
+  //background-position: top;
+}
+
+.large-bg {
+  height: 60vh;
+  min-height: 450px;
+}
+
+.medium-bg {
+  height: 45vh;
+  min-height: 375px;
+}
+
+.small-bg {
+  height: 25vh;
+  min-height: 250px;
+}
+
+.fullsize-bg {
+  height: 100vh;
+  min-height: 800px;
+}

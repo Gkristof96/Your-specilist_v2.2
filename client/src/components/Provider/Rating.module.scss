@@ -1,0 +1,25 @@
+@use '../../styles/abstracts' as *;
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+
+  .rating-stars {
+    span {
+      font-size: 24px;
+    }
+  }
+  .rating-text {
+    font-size: 14px;
+    color: $dark-text;
+    margin-left: 10px;
+  }
+}
+
+@media screen and(max-width: 450px) {
+  .rating {
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+}

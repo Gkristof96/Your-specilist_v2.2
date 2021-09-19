@@ -1,0 +1,40 @@
+@use '../../styles/abstracts' as *;
+
+.profession-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    padding: 0.5rem 2rem;
+    background: $purple;
+    font-weight: 500;
+    line-height: 27px;
+
+    color: $light-text;
+
+    &.action {
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .small {
+    font-size: $body;
+    padding: 0.2rem 1rem;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .medium {
+    font-size: $headline;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .large {
+    font-size: $title_2;
+  }
+}

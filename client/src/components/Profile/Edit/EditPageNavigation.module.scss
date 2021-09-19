@@ -1,0 +1,30 @@
+@use '../../../styles/abstracts' as *;
+
+.link-btn {
+  width: 100%;
+  height: 50px;
+  border: 3px solid $purple;
+  font-size: clamp(14px, 2vw, 24px);
+  border-radius: 10px;
+  background: transparent;
+  color: $purple;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border: none;
+    background: $purple;
+    color: $light-text;
+  }
+  &.active {
+    border: none;
+    background: $purple;
+    color: $light-text;
+  }
+}
