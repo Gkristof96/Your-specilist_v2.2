@@ -23,7 +23,7 @@
 
   h1 {
     font-weight: 500;
-    font-size: clamp(36px, 5vw, 48px);
+    font-size: 3rem;
     line-height: 72px;
 
     color: $purple;
@@ -54,7 +54,7 @@
   margin-bottom: 15px;
   h2 {
     font-weight: 500;
-    font-size: clamp($caption, 1vw, 24px);
+    font-size: $title_2;
     line-height: 36px;
     margin-bottom: 15px;
     margin-right: 25px;

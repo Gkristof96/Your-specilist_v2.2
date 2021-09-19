@@ -35,7 +35,7 @@
 
       h1 {
         font-weight: 500;
-        font-size: clamp(18px, 2vw, 24px);
+        font-size: $title_2;
         line-height: 29px;
 
         color: $purple;
@@ -63,11 +63,11 @@
         margin-right: 5px;
         color: $purple;
       }
-      margin-bottom: $headline;
+      margin-bottom: 20px;
     }
     p {
       font-weight: 300;
-      font-size: clamp($caption, 1vw, 16px);
+      font-size: 1rem;
       color: $dark-text;
       line-height: $headline;
       text-align: justify;

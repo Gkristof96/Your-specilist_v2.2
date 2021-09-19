@@ -5,27 +5,27 @@
 
   h1 {
     font-weight: 500;
-    font-size: clamp($title_1, 5vw, 48px);
-    margin-bottom: $headline;
+    font-size: 3rem;
+    margin-bottom: 20px;
   }
 
   p {
     font-weight: 300;
-    font-size: clamp($body, 2vw, $title_2);
+    font-size: $title_2;
     text-align: justify;
     margin-bottom: 25px;
   }
 
   li {
-    margin-bottom: $caption;
+    margin-bottom: 12px;
     font-weight: 500;
-    font-size: clamp($body, 2vw, 24px);
+    font-size: $title_2;
     display: flex;
     align-items: center;
 
     .icon {
       margin-right: 15px;
-      font-size: clamp($headline, 2vw, $header);
+      font-size: $header;
     }
   }
 }

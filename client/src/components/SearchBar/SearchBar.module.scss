@@ -54,7 +54,7 @@
     grid-template-columns: 1fr 110px;
     grid-template-rows: 50px 50px;
     grid-row-gap: 10px;
-    padding: calc(75px / 2) $headline;
+    padding: calc(75px / 2) 20px;
     a,
     span {
       grid-column: 2/3;

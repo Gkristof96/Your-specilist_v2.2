@@ -99,7 +99,7 @@
 
 @media screen and(max-width: 450px) {
   .login-card {
-    width: calc(100% - $headline);
+    width: calc(100% - 50px);
     form .checkbox span {
       font-size: $caption;
     }

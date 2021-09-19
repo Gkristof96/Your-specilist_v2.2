@@ -18,17 +18,17 @@
   h1 {
     color: $purple;
     text-align: center;
-    font-size: clamp($headline, 5vw, 24px);
+    font-size: $title_2;
     margin-bottom: 10px;
   }
   p {
     text-align: center;
-    font-size: clamp($body, 3vw, 18px);
+    font-size: 1rem;
   }
 }
 
 @media screen and(max-width: 768px) {
   .modal {
-    padding: $headline 30px;
+    padding: 20px 30px;
   }
 }

@@ -13,7 +13,7 @@
     width: 420px;
     text-align: center;
     font-weight: 600;
-    font-size: clamp($title_1, 4vw, 36px);
+    font-size: $title_1;
     line-height: 50px;
     padding: 15px 0;
     margin-bottom: 25px;
@@ -23,7 +23,7 @@
   p {
     text-align: center;
     font-weight: normal;
-    font-size: clamp($body, 3vw, 18px);
+    font-size: 1rem;
     line-height: 21px;
     margin-bottom: 50px;
   }

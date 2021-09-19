@@ -5,13 +5,13 @@
 
   h1 {
     font-weight: 500;
-    font-size: clamp($title_1, 5vw, 48px);
-    margin-bottom: $headline;
+    font-size: $headline;
+    margin-bottom: 20px;
   }
 
   p {
     font-weight: 300;
-    font-size: clamp($body, 2vw, $title_2);
+    font-size: $title_2;
     text-align: justify;
     margin-bottom: 25px;
   }
