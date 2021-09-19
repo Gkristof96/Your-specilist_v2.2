@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FaTimes } from "react-icons/fa";
 import { Link, useHistory } from "react-router-dom";
-import style from "./RegisterCard.module.scss";
+import classes from "./RegisterCard.module.scss";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
@@ -54,9 +54,9 @@ const RegisterCard = () => {
     history.replace("/");
   };
   return (
-    <div className={style["register-card"]}>
+    <div className={classes["register-card"]}>
       <h1>Regisztráció</h1>
-      <FaTimes className={style.icon} onClick={closeRegisterHandler} />
+      <FaTimes className={classes.icon} onClick={closeRegisterHandler} />
       {error && <Message type="error" message={error} />}
       {loading && <Loader />}
       <Formik

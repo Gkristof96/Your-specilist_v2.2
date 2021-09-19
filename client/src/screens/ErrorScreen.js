@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 import { useHistory } from "react-router-dom";
-import style from "./ErrorScreen.module.scss";
+import classes from "./ErrorScreen.module.scss";
 
 import Button from "../components/UI/Buttons/Button";
-import Card from "../components/UI/Card";
-import ImageBackground from "../components/UI/ImageBackground";
+import ScreenContent from "../components/UI/ScreenContent";
+import ScreenHeader from "../components/UI/ScreenHeader";
 
 const ErrorScreen = () => {
   const history = useHistory();
@@ -15,9 +15,9 @@ const ErrorScreen = () => {
 
   return (
     <Fragment>
-      <ImageBackground className="small-bg" />
-      <Card>
-        <div className={style.leftbar}>
+      <ScreenHeader className="small-bg" />
+      <ScreenContent>
+        <div className={classes.leftbar}>
           <h1>Hoppá! Úgy tűnik valami hiba történt.</h1>
           <span>404</span>
           <p>
@@ -26,10 +26,10 @@ const ErrorScreen = () => {
           </p>
           <Button onClick={routeRedirectHandler}>Főoldalra</Button>
         </div>
-        <div className={style.rightbar}>
+        <div className={classes.rightbar}>
           <img src="/images/error.svg" alt="404" />
         </div>
-      </Card>
+      </ScreenContent>
     </Fragment>
   );
 };

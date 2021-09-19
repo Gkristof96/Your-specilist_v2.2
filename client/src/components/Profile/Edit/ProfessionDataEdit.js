@@ -1,7 +1,7 @@
 import { Fragment, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import style from "./ProfessionDataEdit.module.scss";
+import classes from "./ProfessionDataEdit.module.scss";
 
 import AutocompleteInput from "../../SearchBar/AutocompleteInput";
 import ProfessionBadge from "../../Professions/ProfessionBadge";
@@ -84,7 +84,7 @@ const ProfessionDataEdit = () => {
         már mentett szakmáidat ha azt szeretnéd.
       </p>
       <h1>Szakmák</h1>
-      <div className={style["profession-container"]}>
+      <div className={classes["profession-container"]}>
         {provider.professions.map((profession, index) => (
           <ProfessionBadge
             onChooseProfession={openModalHandler}
@@ -94,7 +94,7 @@ const ProfessionDataEdit = () => {
         ))}
       </div>
       <form onSubmit={submitHandler}>
-        <label className={style.text}>Adj hozzá új szakmát</label>
+        <label className={classes.text}>Adj hozzá új szakmát</label>
         <AutocompleteInput
           setInput={setProfession}
           items={professions}

@@ -1,9 +1,9 @@
 import { Fragment } from "react";
 import { Redirect, Route, Switch, useRouteMatch } from "react-router";
-import style from "./ProfileEditScreen.module.scss";
+import classes from "./ProfileEditScreen.module.scss";
 
-import Card from "../components/UI/Card";
-import ImageBackground from "../components/UI/ImageBackground";
+import ScreenContent from "../components/UI/ScreenContent";
+import ScreenHeader from "../components/UI/ScreenHeader";
 import PersonalDataEdit from "../components/Profile/Edit/PersonalDataEdit";
 import ProfessionDataEdit from "../components/Profile/Edit/ProfessionDataEdit";
 import GalleryEdit from "../components/Profile/Edit/GalleryEdit";
@@ -15,12 +15,12 @@ const ProfileEditScreen = () => {
   let { path } = useRouteMatch();
   return (
     <Fragment>
-      <ImageBackground className="small-bg" />
-      <Card padding="asimetric-padding">
-        <div className={style["edit-menu"]}>
+      <ScreenHeader className="small-bg" />
+      <ScreenContent padding="asimetric-padding">
+        <div className={classes["edit-menu"]}>
           <EditPageNavigation />
         </div>
-        <div className={style["edit-form"]}>
+        <div className={classes["edit-form"]}>
           <Switch>
             <Route path={path} exact>
               <Redirect to={`${path}/personal`} />
@@ -42,7 +42,7 @@ const ProfileEditScreen = () => {
             </Route>
           </Switch>
         </div>
-      </Card>
+      </ScreenContent>
     </Fragment>
   );
 };

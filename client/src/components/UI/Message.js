@@ -1,9 +1,9 @@
-import style from "./Message.module.scss";
+import classes from "./Message.module.scss";
 
 const Message = (props) => {
   return (
-    <div className={`${style["message-container"]} ${style[`${props.type}`]}`}>
-      <span className={`${style[`${props.type}`]} ${style[`${props.margin}`]}`}>
+    <div className={`${classes["message-container"]} ${classes[`${props.type}`]}`}>
+      <span className={`${classes[`${props.type}`]} ${classes[`${props.margin}`]}`}>
         {props.message}
         {props.children}
       </span>

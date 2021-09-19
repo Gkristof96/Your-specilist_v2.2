@@ -1,6 +1,6 @@
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
-import style from "./ProviderCard.module.scss";
+import classes from "./ProviderCard.module.scss";
 
 import Rating from "./Rating";
 import ProfessionBadge from "../Professions/ProfessionBadge";
@@ -12,13 +12,13 @@ const ProviderCard = ({ provider }) => {
     history.replace(`/provider/${provider._id}`);
   };
   return (
-    <div onClick={chooseProviderHandler} className={style["provider-card"]}>
+    <div onClick={chooseProviderHandler} className={classes["provider-card"]}>
       <img
         src={provider.image}
         alt={`${provider.firstname} ${provider.lastname}`}
       />
-      <div className={style["provider-info"]}>
-        <div className={style.header}>
+      <div className={classes["provider-info"]}>
+        <div className={classes.header}>
           <h1>{provider.name}</h1>
           <Rating
             value={provider.rating}
@@ -27,14 +27,14 @@ const ProviderCard = ({ provider }) => {
           />
         </div>
         <h2>
-          <FaMapMarkerAlt className={style.icon} /> Hungary, {provider.city}
+          <FaMapMarkerAlt className={classes.icon} /> Hungary, {provider.city}
         </h2>
         {provider.bio ? (
           <p>{provider.bio}</p>
         ) : (
           <p>Ez a szakember még nem töltött fel bemutatkozó szöveget.</p>
         )}
-        <div className={style["professions-bar"]}>
+        <div className={classes["professions-bar"]}>
           {provider.professions.map((profession, index) => (
             <ProfessionBadge
               professionName={profession.name}

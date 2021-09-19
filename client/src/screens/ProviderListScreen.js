@@ -1,9 +1,9 @@
 import { Fragment, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useLocation } from "react-router-dom";
-import style from "./ProviderListScreen.module.scss";
+import classes from "./ProviderListScreen.module.scss";
 
-import ImageBackground from "../components/UI/ImageBackground";
+import ScreenHeader from "../components/UI/ScreenHeader";
 import HeroText from "../components/UI/HeroText";
 import SearchBar from "../components/SearchBar/SearchBar";
 import Loader from "../components/UI/Loader";
@@ -46,7 +46,7 @@ const ProvidersListScreen = () => {
 
   return (
     <Fragment>
-      <ImageBackground className="large-bg">
+      <ScreenHeader className="large-bg">
         <HeroText>
           <h1>Hiába keresel nem találsz szakembert?</h1>
           <p>
@@ -55,9 +55,9 @@ const ProvidersListScreen = () => {
           </p>
         </HeroText>
         <SearchBar onSearchProviders={searchProvidersHandler} />
-      </ImageBackground>
-      <section className={style.providers}>
-        <div className={style.container}>
+      </ScreenHeader>
+      <section className={classes.providers}>
+        <div className={classes.container}>
           {loading ? (
             <Loader size="large" />
           ) : error ? (

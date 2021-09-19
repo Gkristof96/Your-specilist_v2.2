@@ -13,7 +13,7 @@ const Layout = (props) => {
   return (
     <Fragment>
       <Header onToggleDrawer={toggleDrawerHandler} isDrawerOpen={isDrawerOpen} />
-      {isDrawerOpen && <SideDrawer onToggleDrawer={toggleDrawerHandler} isDrawerOpen={isDrawerOpen} />}
+      <SideDrawer onToggleDrawer={toggleDrawerHandler} isDrawerOpen={isDrawerOpen} />
       <div className="background" />
       <main>{props.children}</main>
       <Footer />

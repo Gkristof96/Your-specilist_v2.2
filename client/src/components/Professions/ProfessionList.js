@@ -1,6 +1,6 @@
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
-import style from "./ProfessionList.module.scss";
+import classes from "./ProfessionList.module.scss";
 
 import ProfessionBadge from "./ProfessionBadge";
 
@@ -17,13 +17,13 @@ const ProfessionList = (props) => {
   };
 
   return (
-    <div className={style["profession-list"]}>
+    <div className={classes["profession-list"]}>
       <FaArrowAltCircleLeft
-        className={style["back-arrow"]}
+        className={classes["back-arrow"]}
         onClick={closeProfessionListHandler}
       />
-      <h1 className={style.title}>{`${category} Kategória Szakmái`}</h1>
-      <div className={style.professions}>
+      <h1 className={classes.title}>{`${category} Kategória Szakmái`}</h1>
+      <div className={classes.professions}>
         {professionList.map((data, i) => (
           <ProfessionBadge
             onChooseProfession={searchProfessionHandler}

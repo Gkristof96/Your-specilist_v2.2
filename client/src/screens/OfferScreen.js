@@ -4,9 +4,9 @@ import { createOffer } from "../actions/offerActions";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
-import ImageBackground from "../components/UI/ImageBackground";
-import Card from "../components/UI/Card";
-import style from "./OfferScreen.module.scss";
+import ScreenHeader from "../components/UI/ScreenHeader";
+import ScreenContent from "../components/UI/ScreenContent";
+import classes from "./OfferScreen.module.scss";
 import Button from "../components/UI/Buttons/Button";
 import HeroText from "../components/UI/HeroText";
 import Modal from "../components/UI/Modal";
@@ -78,7 +78,7 @@ const OfferScreen = () => {
           )}
         </Modal>
       )}
-      <ImageBackground className="large-bg">
+      <ScreenHeader className="large-bg">
         <HeroText>
           <h1>Nem akarsz keresgélni?</h1>
           <p>
@@ -86,9 +86,9 @@ const OfferScreen = () => {
             megkeres az ajánlatával
           </p>
         </HeroText>
-      </ImageBackground>
-      <Card flexstart>
-        <div className={style.leftbar}>
+      </ScreenHeader>
+      <ScreenContent flexstart>
+        <div className={classes.leftbar}>
           <h1>Kérj árajánlatot!</h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -99,7 +99,7 @@ const OfferScreen = () => {
             remaining essentially unchanged.
           </p>
         </div>
-        <div className={style.rightbar}>
+        <div className={classes.rightbar}>
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
@@ -141,7 +141,7 @@ const OfferScreen = () => {
             )}
           </Formik>
         </div>
-      </Card>
+      </ScreenContent>
     </>
   );
 };

@@ -1,9 +1,9 @@
-import style from "./Button.module.scss";
+import classes from "./Button.module.scss";
 
 const Button = (props) => {
   return (
     <button
-      className={style.button}
+      className={classes.button}
       onClick={props.onClick}
       type={props.type || "button"}
       disabled={props.disabled}

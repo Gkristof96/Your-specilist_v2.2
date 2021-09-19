@@ -1,9 +1,9 @@
-import style from "./Footer.module.scss";
+import classes from "./Footer.module.scss";
 
 const Footer = () => {
   return (
     <footer>
-      {/*<div className={style["footer-header"]}>
+      {/*<div className={classes["footer-header"]}>
         <div className="logo">
           <img src="/images/logo.png" alt="logo" />
           <div className="text">
@@ -29,7 +29,7 @@ const Footer = () => {
           <li>Bejelentkezés</li>
         </ul>
   </div>*/}
-      <div className={style["footer-bottom"]}>
+      <div className={classes["footer-bottom"]}>
         <h1>Terms of usage | CopyRight © Kristof - 2020</h1>
       </div>
     </footer>

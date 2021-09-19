@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "./AutocompleteInput.module.scss";
+import classes from "./AutocompleteInput.module.scss";
 
 const AutocompleteInput = (props) => {
   const [suggestions, setSuggestions] = useState([]);
@@ -31,8 +31,8 @@ const AutocompleteInput = (props) => {
 
   return (
     <div
-      className={`${style["auto-input"]} ${style[`${props.size}`]} ${
-        style[`${props.type}`]
+      className={`${classes["auto-input"]} ${classes[`${props.size}`]} ${
+        classes[`${props.type}`]
       }`}
     >
       <input
@@ -43,7 +43,7 @@ const AutocompleteInput = (props) => {
         onFocus={openSuggestionHandler}
       />
       {showSuggestions && suggestions.length > 0 && (
-        <ul className={style[`${props.size}`]}>
+        <ul className={classes[`${props.size}`]}>
           {suggestions.map((suggestion, index) => (
             <li key={index} onClick={() => suggestionChangeHandler(suggestion)}>
               {suggestion}

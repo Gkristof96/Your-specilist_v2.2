@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import style from "./PersonalDataEdit.module.scss";
+import classes from "./PersonalDataEdit.module.scss";
 
 import AutocompleteInput from "../../SearchBar/AutocompleteInput";
 import Button from "../../UI/Buttons/Button";
@@ -83,9 +83,9 @@ const PersonalDataEdit = () => {
     dispatch(updateProvider({ name, email, tel, city, bio, image }));
   };
   return (
-    <form className={style["edit-form"]} onSubmit={submitHandler}>
+    <form className={classes["edit-form"]} onSubmit={submitHandler}>
       <img src={provider.image} alt={provider.name} />
-      <label className={style.picture}>
+      <label className={classes.picture}>
         Cseréld le a profilképed
         <input type="file" onChange={(e) => uploadFileHandler} />
         {isUpload && <Loader />}
@@ -112,7 +112,7 @@ const PersonalDataEdit = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <label className={style.bio}>Bemutatkozás</label>
+      <label className={classes.bio}>Bemutatkozás</label>
       <textarea value={bio} onChange={(e) => setBio(e.target.value)} />
 
       <Button type="submit">Mentés</Button>

@@ -1,4 +1,4 @@
-import style from "./ProfessionCategoryCard.module.scss";
+import classes from "./ProfessionCategoryCard.module.scss";
 
 const ProfessionCategoryCard = (props) => {
   const chooseCategoryHandler = () => {
@@ -6,7 +6,7 @@ const ProfessionCategoryCard = (props) => {
   };
 
   return (
-    <div className={style["category-card"]} onClick={chooseCategoryHandler}>
+    <div className={classes["category-card"]} onClick={chooseCategoryHandler}>
       <img src={props.category.image} alt={props.category.category} />
       <h1>{props.category.category}</h1>
     </div>

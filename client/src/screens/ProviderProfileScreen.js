@@ -11,8 +11,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import Loader from "../components/UI/Loader";
 import Message from "../components/UI/Message";
-import ImageBackground from "../components/UI/ImageBackground";
-import Card from "../components/UI/Card";
+import ScreenHeader from "../components/UI/ScreenHeader";
+import ScreenContent from "../components/UI/ScreenContent";
 
 import { listProviderData } from "../actions/providerActions";
 import ProfileHeader from "../components/Profile/ProfileHeader";
@@ -21,7 +21,7 @@ import Gallery from "../components/Profile/Gallery";
 import RatingForm from "../components/Profile/RatingForm";
 import ButtonContainer from "../components/Profile/ButtonContainer";
 import IconButton from "../components/UI/Buttons/IconButton";
-import style from "./ProviderProfileScreen.module.scss";
+import classes from "./ProviderProfileScreen.module.scss";
 
 const ProviderProfilScreen = ({ match }) => {
   let { path, url } = useRouteMatch();
@@ -50,8 +50,8 @@ const ProviderProfilScreen = ({ match }) => {
 
   return (
     <Fragment>
-      <ImageBackground className="medium-bg" />
-      <Card padding="medium-padding" alignment="vertical">
+      <ScreenHeader className="medium-bg" />
+      <ScreenContent padding="medium-padding" alignment="vertical">
         {error && <Message message={error} type="error" />}
         {loading ? (
           <Loader size="large" />
@@ -62,13 +62,13 @@ const ProviderProfilScreen = ({ match }) => {
               <Route path={path} exact>
                 <ButtonContainer>
                   <IconButton buttonText="Hamarosan!">
-                    <FaTag className={style.icon} />
+                    <FaTag className={classes.icon} />
                   </IconButton>
                   <IconButton
                     buttonText="Értékeld a munkám"
                     onClick={redirectToRatingHandler}
                   >
-                    <FaAward className={style.icon} />
+                    <FaAward className={classes.icon} />
                   </IconButton>
                 </ButtonContainer>
                 <Description bio={provider.bio} />
@@ -80,7 +80,7 @@ const ProviderProfilScreen = ({ match }) => {
                     buttonText="A vissza a szakember profiljára"
                     onClick={redirectBackHandler}
                   >
-                    <FaArrowAltCircleLeft className={style.icon} />
+                    <FaArrowAltCircleLeft className={classes.icon} />
                   </IconButton>
                 </ButtonContainer>
                 <RatingForm id={id} />
@@ -88,7 +88,7 @@ const ProviderProfilScreen = ({ match }) => {
             </Switch>
           </Fragment>
         )}
-      </Card>
+      </ScreenContent>
     </Fragment>
   );
 };

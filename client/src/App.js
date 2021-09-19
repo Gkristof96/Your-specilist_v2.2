@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { Suspense } from "react";
-import "./styles/App.scss";
+import "./styles/style.scss";
 
 import Layout from "./components/Layout/Layout";
 import Loader from "./components/UI/Loader";

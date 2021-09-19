@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import style from "./RatingForm.module.scss";
+import classes from "./RatingForm.module.scss";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
@@ -86,7 +86,7 @@ const RatingForm = (props) => {
           )}
         </Modal>
       )}
-      <div className={style.rating}>
+      <div className={classes.rating}>
         <h3>Értékelés</h3>
         <Formik
           initialValues={initialValues}

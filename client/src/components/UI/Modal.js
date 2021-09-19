@@ -1,13 +1,10 @@
-import style from "./Modal.module.scss";
+import classes from "./Modal.module.scss";
 import { Fragment } from "react";
 import ReactDOM from "react-dom";
-
-const Backdrop = (props) => {
-  return <div className={style.backdrop} onClick={props.onConfirm} />;
-};
+import Backdrop from "./Backdrop";
 
 const ModalOverlay = (props) => {
-  return <div className={style.modal}>{props.children}</div>;
+  return <div className={classes.modal}>{props.children}</div>;
 };
 
 const Modal = (props) => {

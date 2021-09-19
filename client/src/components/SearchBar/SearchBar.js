@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FaSearch } from "react-icons/fa";
-import style from "./SearchBar.module.scss";
+import classes from "./SearchBar.module.scss";
 
 import AutocompleteInput from "./AutocompleteInput";
 
@@ -32,7 +32,7 @@ const SearchBar = (props) => {
   };
 
   return (
-    <div className={style["search-bar"]}>
+    <div className={classes["search-bar"]}>
       <AutocompleteInput
         setInput={cityInputHandler}
         items={cities}
@@ -46,7 +46,7 @@ const SearchBar = (props) => {
         value={profession}
       />
       <span onClick={searchHandler}>
-        <FaSearch className={style.icon} />
+        <FaSearch className={classes.icon} />
       </span>
     </div>
   );

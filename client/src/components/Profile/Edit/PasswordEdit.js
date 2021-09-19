@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import style from "./PasswordEdit.module.scss";
+import classes from "./PasswordEdit.module.scss";
 
 import Button from "../../UI/Buttons/Button";
 import Loader from "../../UI/Loader";
@@ -77,18 +77,18 @@ const PasswordEdit = () => {
         onSubmit={onSubmit}
       >
         {(formik) => (
-          <Form className={style["edit-form"]}>
+          <Form className={classes["edit-form"]}>
             <img
-              className={style["profile-img"]}
+              className={classes["profile-img"]}
               src={provider.image}
               alt={provider.name}
             />
-            <h1 className={style.name}>{provider.name}</h1>
-            <label className={style.label}>Régi Jelszó</label>
+            <h1 className={classes.name}>{provider.name}</h1>
+            <label className={classes.label}>Régi Jelszó</label>
             <FormControl control="input" type="password" name="oldPassword" />
-            <label className={style.label}>Új Jelszó</label>
+            <label className={classes.label}>Új Jelszó</label>
             <FormControl control="input" type="password" name="newPassword" />
-            <label className={style.label}>Új Jelszó újra</label>
+            <label className={classes.label}>Új Jelszó újra</label>
             <FormControl
               control="input"
               type="password"

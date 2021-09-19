@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
-import style from "./Paginate.module.scss";
+import classes from "./Paginate.module.scss";
 
 const Paginate = ({ pages, page, keyword }) => {
   const { city, profession } = keyword;
   return (
-    <ul className={style.pagination}>
+    <ul className={classes.pagination}>
       {[...Array(pages).keys()].map((number) => (
         <NavLink
-          activeClassName={style.active}
+          activeClassName={classes.active}
           exact={true}
           key={number}
           to={

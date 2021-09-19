@@ -1,9 +1,9 @@
 import { Fragment, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import style from "./HomeScreen.module.scss";
+import classes from "./HomeScreen.module.scss";
 
-import ImageBackground from "../components/UI/ImageBackground";
+import ScreenHeader from "../components/UI/ScreenHeader";
 import SearchBar from "../components/SearchBar/SearchBar";
 import ProfessionList from "../components/Professions/ProfessionList";
 import ProfessionCategoryCard from "../components/Professions/ProfessionCategoryCard";
@@ -58,7 +58,7 @@ const HomeScreen = () => {
           </Fragment>
         </ErrorModal>
       )}
-      <ImageBackground className="large-bg">
+      <ScreenHeader className="large-bg">
         <HeroText>
           <h1 className="">Hiába keresel nem találsz szakembert?</h1>
           <p>
@@ -67,9 +67,9 @@ const HomeScreen = () => {
           </p>
         </HeroText>
         <SearchBar onSearchProviders={searchProvidersHandler} />
-      </ImageBackground>
-      <section className={style["category-content"]}>
-        <h1 className={style["category-title"]}>Szakma Kategóriák</h1>
+      </ScreenHeader>
+      <section className={classes["category-content"]}>
+        <h1 className={classes["category-title"]}>Szakma Kategóriák</h1>
         <p>
           Amenyiben csak szakmák szerint szeretnél keresni, itt megtalálod
           kategóriákba sorolva a szakmákat amiket megtalálhatsz az oldalon. A
@@ -80,7 +80,7 @@ const HomeScreen = () => {
         ) : showList ? (
           <ProfessionList data={listData} setShowList={setShowList} />
         ) : (
-          <div className={style["profession-container"]}>
+          <div className={classes["profession-container"]}>
             {categories.map((data, index) => (
               <ProfessionCategoryCard
                 onToggleProfessionList={toggleProfessionListHandler}

@@ -1,8 +1,8 @@
-import style from "./Gallery.module.scss";
+import classes from "./Gallery.module.scss";
 
 const Gallery = (props) => {
   return (
-    <div className={style.gallery}>
+    <div className={classes.gallery}>
       <h3>Galléria</h3>
       {props.gallery.length > 0 ? (
         <p>Galléria</p>

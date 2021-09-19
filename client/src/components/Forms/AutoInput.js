@@ -1,6 +1,6 @@
 import { Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
-import style from "./Form.module.scss";
+import classes from "./Form.module.scss";
 import { Fragment } from "react";
 
 const AutoInput = (props) => {
@@ -10,7 +10,7 @@ const AutoInput = (props) => {
     console.log("change");
   };
   return (
-    <div className={style["form-control"]}>
+    <div className={classes["form-control"]}>
       <Field id={name} name={name} {...rest} placeholder={placeholder}>
         {({ field, form: { touched }, meta }) => {
           return (

@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import style from "./Header.module.scss";
+import classes from "./Header.module.scss";
 
 import HamburgerButton from "../UI/Buttons/HamburgerButton";
 import ProfileButton from "../Profile/ProfileButton";
@@ -19,30 +19,30 @@ const Header = (props) => {
   };
 
   return (
-    <header className={`${props.isDrawerOpen && style.open}`}>
-      <Link to="/" className={style.logo}>
+    <header className={`${props.isDrawerOpen && classes.open}`}>
+      <Link to="/" className={classes.logo}>
         <img src="/images/logo.webp" alt="Logo of the website" />
         <h1>Your Specialist</h1>
       </Link>
-      <div className={style.navigation}>
+      <div className={classes.navigation}>
         <ul>
           <li>
-            <NavLink to="/" exact activeClassName={style.active}>
+            <NavLink to="/" exact activeClassName={classes.active}>
               Főoldal
             </NavLink>
           </li>
           <li>
-            <NavLink to="/providers" activeClassName={style.active}>
+            <NavLink to="/providers" activeClassName={classes.active}>
               Szakemberek
             </NavLink>
           </li>
           <li>
-            <NavLink to="/offer" activeClassName={style.active}>
+            <NavLink to="/offer" activeClassName={classes.active}>
               Ajánlatkérés
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" activeClassName={style.active}>
+            <NavLink to="/contact" activeClassName={classes.active}>
               Kapcsolat
             </NavLink>
           </li>
@@ -55,7 +55,7 @@ const Header = (props) => {
           )}
         </ul>
       </div>
-      <div className={style["hamburger-btn"]}>
+      <div className={classes["hamburger-btn"]}>
         <HamburgerButton
           isDrawerOpen={props.isDrawerOpen}
           onToggleDrawer={props.onToggleDrawer}

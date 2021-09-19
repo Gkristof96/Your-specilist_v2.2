@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import style from "./ProfileHeader.module.scss";
+import classes from "./ProfileHeader.module.scss";
 
 import Rating from "../Provider/Rating";
 import ProfessionBadge from "../Professions/ProfessionBadge";
@@ -10,11 +10,11 @@ const ProfileHeader = ({ provider }) => {
   return (
     <Fragment>
       <img
-        className={style["profile-image"]}
+        className={classes["profile-image"]}
         src={provider.image}
         alt={provider.name}
       />
-      <div className={style["profile-header"]}>
+      <div className={classes["profile-header"]}>
         <h1>{provider.name}</h1>
         <Rating
           value={provider.rating}
@@ -22,21 +22,21 @@ const ProfileHeader = ({ provider }) => {
           numReviews={provider.numReviews}
         />
       </div>
-      <div className={style["contact-info"]}>
+      <div className={classes["contact-info"]}>
         <h2>
-          <FaMapMarkerAlt className={style.icon} />
+          <FaMapMarkerAlt className={classes.icon} />
           Hungary, {provider.city}
         </h2>
         <h2>
-          <FaEnvelope className={style.icon} />
+          <FaEnvelope className={classes.icon} />
           {provider.email}
         </h2>
         <h2>
-          <FaPhoneAlt className={style.icon} />
+          <FaPhoneAlt className={classes.icon} />
           {provider.tel}
         </h2>
       </div>
-      <div className={style["profession-bar"]}>
+      <div className={classes["profession-bar"]}>
         {provider.professions.map((profession, index) => (
           <ProfessionBadge
             onChooseProfession={doNothingHandler}

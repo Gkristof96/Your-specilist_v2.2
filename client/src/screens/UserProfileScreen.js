@@ -7,14 +7,14 @@ import {
   FaSignOutAlt,
 } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import style from "./UserProfileScreen.module.scss";
+import classes from "./UserProfileScreen.module.scss";
 
 import Loader from "../components/UI/Loader";
 import IconButton from "../components/UI/Buttons/IconButton";
 import ButtonContainer from "../components/Profile/ButtonContainer";
 import Message from "../components/UI/Message";
-import ImageBackground from "../components/UI/ImageBackground";
-import Card from "../components/UI/Card";
+import ScreenHeader from "../components/UI/ScreenHeader";
+import ScreenContent from "../components/UI/ScreenContent";
 import ProfileHeader from "../components/Profile/ProfileHeader";
 import Description from "../components/Profile/Description";
 import Gallery from "../components/Profile/Gallery";
@@ -50,8 +50,8 @@ const UserProfileScreen = () => {
 
   return (
     <Fragment>
-      <ImageBackground className="medium-bg" />
-      <Card alignment="vertical" padding="medium-padding">
+      <ScreenHeader className="medium-bg" />
+      <ScreenContent alignment="vertical" padding="medium-padding">
         {error && <Message message={error} type="error" />}
         {loading ? (
           <Loader size="large" />
@@ -60,26 +60,26 @@ const UserProfileScreen = () => {
             <ProfileHeader provider={provider} />
             <ButtonContainer>
               <IconButton buttonText="Hamarosan!">
-                <FaBriefcase className={style.icon} />
+                <FaBriefcase className={classes.icon} />
               </IconButton>
               <IconButton buttonText="Hamarosan!">
-                <FaCommentDots className={style.icon} />
+                <FaCommentDots className={classes.icon} />
               </IconButton>
               <IconButton
                 buttonText="Beállítások"
                 onClick={redirectToEditHandler}
               >
-                <FaCog className={style.icon} />
+                <FaCog className={classes.icon} />
               </IconButton>
               <IconButton buttonText="Kijelentkezés" onClick={logoutHandler}>
-                <FaSignOutAlt className={style.icon} />
+                <FaSignOutAlt className={classes.icon} />
               </IconButton>
             </ButtonContainer>
             <Description bio={provider.bio} userComponent />
             <Gallery gallery={provider.gallery} userComponent />
           </Fragment>
         )}
-      </Card>
+      </ScreenContent>
     </Fragment>
   );
 };

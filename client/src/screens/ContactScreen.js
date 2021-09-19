@@ -3,12 +3,12 @@ import axios from "axios";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import style from "./ContactScreen.module.scss";
+import classes from "./ContactScreen.module.scss";
 
 import Modal from "../components/UI/Modal";
 import Loader from "../components/UI/Loader";
-import ImageBackground from "../components/UI/ImageBackground";
-import Card from "../components/UI/Card";
+import ScreenHeader from "../components/UI/ScreenHeader";
+import ScreenContent from "../components/UI/ScreenContent";
 import Button from "../components/UI/Buttons/Button";
 import FormControl from "../components/Forms/FormControl";
 
@@ -68,9 +68,9 @@ const ContactScreen = () => {
         </Modal>
       )}
 
-      <ImageBackground className="small-bg" />
-      <Card>
-        <div className={style.leftbar}>
+      <ScreenHeader className="small-bg" />
+      <ScreenContent>
+        <div className={classes.leftbar}>
           <h1>Írj nekünk!</h1>
           <p>
             Ha bármi kérdésed lenne felénk, vagy csak a testszésed szeretnéd
@@ -80,20 +80,20 @@ const ContactScreen = () => {
           </p>
           <ul>
             <li>
-              <FaPhoneAlt className={style.icon} />
+              <FaPhoneAlt className={classes.icon} />
               contact@yourspecialist.hu
             </li>
             <li>
-              <FaEnvelope className={style.icon} />
+              <FaEnvelope className={classes.icon} />
               06 1 456 345
             </li>
             <li>
-              <FaMapMarkerAlt className={style.icon} />
+              <FaMapMarkerAlt className={classes.icon} />
               Budapest
             </li>
           </ul>
         </div>
-        <div className={style.rightbar}>
+        <div className={classes.rightbar}>
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
@@ -119,7 +119,7 @@ const ContactScreen = () => {
             )}
           </Formik>
         </div>
-      </Card>
+      </ScreenContent>
     </Fragment>
   );
 };

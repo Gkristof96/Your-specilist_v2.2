@@ -1,4 +1,4 @@
-import style, { action } from "./ProfessionBadge.module.scss";
+import classes, { action } from "./ProfessionBadge.module.scss";
 
 const ProfessionBadge = (props) => {
   const chooseProfessionHandler = () => {
@@ -6,10 +6,10 @@ const ProfessionBadge = (props) => {
   };
   return (
     <div
-      className={style["profession-badge"]}
+      className={classes["profession-badge"]}
       onClick={chooseProfessionHandler}
     >
-      <span className={`${style[`${props.size}`]} ${props.type && action}`}>
+      <span className={`${classes[`${props.size}`]} ${props.type && action}`}>
         {props.professionName}
       </span>
     </div>

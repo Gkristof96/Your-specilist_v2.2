@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
-import style from "./SideDrawer.module.scss";
+import classes from "./SideDrawer.module.scss";
 
 const SideDrawer = (props) => {
   const userLogin = useSelector((state) => state.userLogin);
@@ -11,26 +11,26 @@ const SideDrawer = (props) => {
   }
   return (
     <ul
-      className={`${style['side-drawer']} ${props.isDrawerOpen && style.open}`}
+      className={`${classes['side-drawer']} ${props.isDrawerOpen && classes.open}`}
       onClick={closeDrawerHandler}
     >
       <li>
-        <NavLink activeClassName={style.active} exact={true} to="/">
+        <NavLink activeClassName={classes.active} exact={true} to="/">
           Főoldal
         </NavLink>
       </li>
       <li>
-        <NavLink activeClassName={style.active} to="/providers">
+        <NavLink activeClassName={classes.active} to="/providers">
           Szakemberek
         </NavLink>
       </li>
       <li>
-        <NavLink activeClassName={style.active} to="/offer">
+        <NavLink activeClassName={classes.active} to="/offer">
           Ajánlatkérés
         </NavLink>
       </li>
       <li>
-        <NavLink activeClassName={style.active} to="/contact">
+        <NavLink activeClassName={classes.active} to="/contact">
           Kapcsolat
         </NavLink>
       </li>
@@ -43,7 +43,7 @@ const SideDrawer = (props) => {
         </li>
       ) : (
         <li>
-          <Link to="/login">Bejelenkezés</Link>
+          <Link to="/auth">Bejelenkezés</Link>
         </li>
       )}
     </ul>

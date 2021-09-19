@@ -4,7 +4,7 @@ import { FaTimes } from "react-icons/fa";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { Link, useHistory } from "react-router-dom";
-import style from "./LoginCard.module.scss";
+import classes from "./LoginCard.module.scss";
 
 import Loader from "../UI/Loader";
 import Message from "../UI/Message";
@@ -43,9 +43,9 @@ const LoginCard = () => {
   };
 
   return (
-    <div className={style["login-card"]}>
+    <div className={classes["login-card"]}>
       <h1>Bejelentkezés</h1>
-      <FaTimes className={style.icon} onClick={closeLoginHandler} />
+      <FaTimes className={classes.icon} onClick={closeLoginHandler} />
       {error && <Message type="error" message={error} />}
       {loading && <Loader />}
       <Formik

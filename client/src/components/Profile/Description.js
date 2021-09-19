@@ -1,8 +1,8 @@
-import style from "./Description.module.scss";
+import classes from "./Description.module.scss";
 
 const Description = (props) => {
   return (
-    <div className={style.description}>
+    <div className={classes.description}>
       <h3>Bemutatkozás</h3>
       {props.bio ? (
         <p>{props.bio}</p>

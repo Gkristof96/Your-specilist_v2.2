@@ -2,16 +2,16 @@ import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { IoLogOutOutline, IoPersonSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import style from "./ProfileButton.module.scss";
+import classes from "./ProfileButton.module.scss";
 
 const ProfileButton = ({ userInfo, logoutHandler }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   return (
     <div
-      className={style["profile-button"]}
+      className={classes["profile-button"]}
       onClick={() => setDropdownOpen(!isDropdownOpen)}
     >
-      <div className={style.button}>
+      <div className={classes.button}>
         <img src={userInfo.image} alt={userInfo.name} />
         <span>{userInfo.name}</span>
         {isDropdownOpen ? (
@@ -20,14 +20,14 @@ const ProfileButton = ({ userInfo, logoutHandler }) => {
           <IoIosArrowDown className="icon" />
         )}
       </div>
-      <div className={`${style.dropdown} ${isDropdownOpen && style.open}`}>
+      <div className={`${classes.dropdown} ${isDropdownOpen && classes.open}`}>
         <Link to="/profile">
           Profil
-          <IoPersonSharp className={style.icon} />
+          <IoPersonSharp className={classes.icon} />
         </Link>
         <span onClick={() => logoutHandler()}>
           Kijelentkezés
-          <IoLogOutOutline className={style.icon} />
+          <IoLogOutOutline className={classes.icon} />
         </span>
       </div>
     </div>

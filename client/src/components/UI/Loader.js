@@ -1,12 +1,12 @@
-import style from "./Loader.module.scss";
+import classes from "./Loader.module.scss";
 
 const Loader = (props) => {
   return (
-    <div className={`${style["loader-container"]} ${style[`${props.size}`]}`}>
+    <div className={`${classes["loader-container"]} ${classes[`${props.size}`]}`}>
       <img
         src="/images/loader.webp"
         alt="loader"
-        className={style[`${props.size}`]}
+        className={classes[`${props.size}`]}
       />
     </div>
   );

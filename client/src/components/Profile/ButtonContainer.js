@@ -1,7 +1,7 @@
-import style from "./ButtonContainer.module.scss";
+import classes from "./ButtonContainer.module.scss";
 
 const ButtonContainer = (props) => {
-  return <div className={style["button-container"]}>{props.children}</div>;
+  return <div className={classes["button-container"]}>{props.children}</div>;
 };
 
 export default ButtonContainer;

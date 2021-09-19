@@ -1,4 +1,4 @@
-import style from "./ErrorModal.module.scss";
+import classes from "./ErrorModal.module.scss";
 import ReactDOM from "react-dom";
 import { Fragment } from "react";
 import { VscChromeClose } from "react-icons/vsc";
@@ -7,7 +7,7 @@ const Backdrop = (props) => {
   const handleClose = () => {
     props.onClose();
   };
-  return <div className={style.backdrop} onClick={handleClose} />;
+  return <div className={classes.backdrop} onClick={handleClose} />;
 };
 
 const ModalOverlay = (props) => {
@@ -15,9 +15,9 @@ const ModalOverlay = (props) => {
     props.onClose();
   };
   return (
-    <div className={style.modal}>
+    <div className={classes.modal}>
       {props.children}
-      <VscChromeClose className={style.icon} onClick={handleClose} />
+      <VscChromeClose className={classes.icon} onClick={handleClose} />
     </div>
   );
 };
