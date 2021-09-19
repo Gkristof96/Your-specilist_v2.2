@@ -50,26 +50,26 @@
           margin: 0 10px;
         }
         span {
-          font-size: 14px;
+          font-size: $body;
         }
       }
     }
     h2 {
       font-weight: 500;
-      font-size: 14px;
+      font-size: $body;
       line-height: 17px;
       color: $purple;
       .icon {
         margin-right: 5px;
         color: $purple;
       }
-      margin-bottom: 20px;
+      margin-bottom: $headline;
     }
     p {
       font-weight: 300;
-      font-size: clamp(12px, 1vw, 16px);
+      font-size: clamp($caption, 1vw, 16px);
       color: $dark-text;
-      line-height: 20px;
+      line-height: $headline;
       text-align: justify;
       margin-bottom: 25px;
       max-height: 135px;

@@ -11,7 +11,7 @@
 
   h1 {
     margin: 25px 0;
-    font-size: clamp(12px, 2vw, 24px);
+    font-size: clamp($caption, 2vw, 24px);
     color: $dark-text;
   }
 
@@ -22,7 +22,7 @@
     a {
       text-decoration: none;
       font-weight: 500;
-      font-size: 18px;
+      font-size: $headline;
       line-height: 27px;
       background: $purple;
       color: $light-text;
@@ -54,12 +54,12 @@
     .professions {
       a {
         padding: 0.25rem 1.2rem;
-        font-size: 14px;
+        font-size: $body;
       }
     }
     .back-arrow {
       left: 15px;
-      top: 20px;
+      top: $headline;
     }
   }
 }

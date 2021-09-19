@@ -10,7 +10,7 @@
 }
 
 .icon {
-  font-size: 25px;
+  font-size: $title_2;
   color: $light-text;
 }
 
@@ -36,11 +36,11 @@
 
     .rating-stars {
       span {
-        font-size: 32px;
+        font-size: $header;
       }
     }
     .rating-text {
-      font-size: 14px;
+      font-size: $body;
       color: $dark-text;
       margin-left: 10px;
     }
@@ -54,7 +54,7 @@
   margin-bottom: 15px;
   h2 {
     font-weight: 500;
-    font-size: clamp(12px, 1vw, 24px);
+    font-size: clamp($caption, 1vw, 24px);
     line-height: 36px;
     margin-bottom: 15px;
     margin-right: 25px;
@@ -63,7 +63,7 @@
     align-items: center;
     .icon {
       line-height: 36px;
-      font-size: 24px;
+      font-size: $title_2;
       margin-right: 5px;
       color: $dark-text;
     }

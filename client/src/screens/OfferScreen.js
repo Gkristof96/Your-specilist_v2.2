@@ -8,7 +8,6 @@ import ScreenHeader from "../components/UI/ScreenHeader";
 import ScreenContent from "../components/UI/ScreenContent";
 import classes from "./OfferScreen.module.scss";
 import Button from "../components/UI/Buttons/Button";
-import HeroText from "../components/UI/HeroText";
 import Modal from "../components/UI/Modal";
 import Loader from "../components/UI/Loader";
 import FormControl from "../components/Forms/FormControl";
@@ -79,13 +78,11 @@ const OfferScreen = () => {
         </Modal>
       )}
       <ScreenHeader className="large-bg">
-        <HeroText>
           <h1>Nem akarsz keresgélni?</h1>
           <p>
             Ebben az esetben adj fel egy megbízást, és majd egy szakember
             megkeres az ajánlatával
           </p>
-        </HeroText>
       </ScreenHeader>
       <ScreenContent flexstart>
         <div className={classes.leftbar}>

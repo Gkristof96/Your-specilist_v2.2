@@ -6,20 +6,20 @@
 
   h1 {
     font-weight: 500;
-    font-size: clamp(28px, 4vw, 48px);
+    font-size: clamp($title_1, 4vw, 48px);
     margin-bottom: 10px;
   }
   span {
     font-weight: bold;
     font-size: clamp(72px, 8vw, 96px);
-    margin-bottom: 20px;
+    margin-bottom: $headline;
   }
   p {
     font-weight: 500;
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: clamp($body, 2vw, 18px);
     line-height: 27px;
 
-    margin-bottom: 20px;
+    margin-bottom: $headline;
   }
 }
 

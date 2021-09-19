@@ -31,7 +31,7 @@
     span {
       user-select: none;
       margin: 0 5px;
-      font-size: clamp(10px, 1vw, 14px);
+      font-size: clamp(10px, 1vw, $body);
     }
     .icon {
       margin: 0;

@@ -7,11 +7,11 @@
 
   .rating-stars {
     span {
-      font-size: 24px;
+      font-size: $title_2;
     }
   }
   .rating-text {
-    font-size: 14px;
+    font-size: $body;
     color: $dark-text;
     margin-left: 10px;
   }

@@ -2,7 +2,7 @@
 
 .edit-form {
   width: calc(100% - 25px);
-  font-size: 18px;
+  font-size: $headline;
   display: grid;
   grid-template-columns: 30% 70%;
   grid-column-gap: 25px;
@@ -27,7 +27,7 @@
   }
   input,
   textarea {
-    font-size: 18px;
+    font-size: $headline;
     height: 40px;
     width: 100%;
     border: 1px solid $input-border;

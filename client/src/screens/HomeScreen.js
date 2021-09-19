@@ -7,7 +7,6 @@ import ScreenHeader from "../components/UI/ScreenHeader";
 import SearchBar from "../components/SearchBar/SearchBar";
 import ProfessionList from "../components/Professions/ProfessionList";
 import ProfessionCategoryCard from "../components/Professions/ProfessionCategoryCard";
-import HeroText from "../components/UI/HeroText";
 import Loader from "../components/UI/Loader";
 import ErrorModal from "../components/UI/Modals/ErrorModal";
 
@@ -59,13 +58,11 @@ const HomeScreen = () => {
         </ErrorModal>
       )}
       <ScreenHeader className="large-bg">
-        <HeroText>
-          <h1 className="">Hiába keresel nem találsz szakembert?</h1>
-          <p>
-            Tégy egy probát nálunk, garantáljuk hogy itt megtalálod azt mester
-            akire most szükséged van
-          </p>
-        </HeroText>
+        <h1 className="">Hiába keresel nem találsz szakembert?</h1>
+        <p>
+          Tégy egy probát nálunk, garantáljuk hogy itt megtalálod azt mester
+          akire most szükséged van
+        </p>
         <SearchBar onSearchProviders={searchProvidersHandler} />
       </ScreenHeader>
       <section className={classes["category-content"]}>

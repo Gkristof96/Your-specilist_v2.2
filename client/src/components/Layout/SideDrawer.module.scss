@@ -29,7 +29,7 @@
         color: $purple;
         display: flex;
         align-items: center;
-        font-size: 18px;
+        font-size: $headline;
         img {
           width: 35px;
           height: 35px;
@@ -38,7 +38,7 @@
         span {
           user-select: none;
           margin: 0 5px;
-          font-size: 18px;
+          font-size: $headline;
         }
       }
     }

@@ -4,7 +4,6 @@ import { useParams, useLocation } from "react-router-dom";
 import classes from "./ProviderListScreen.module.scss";
 
 import ScreenHeader from "../components/UI/ScreenHeader";
-import HeroText from "../components/UI/HeroText";
 import SearchBar from "../components/SearchBar/SearchBar";
 import Loader from "../components/UI/Loader";
 import Message from "../components/UI/Message";
@@ -47,13 +46,11 @@ const ProvidersListScreen = () => {
   return (
     <Fragment>
       <ScreenHeader className="large-bg">
-        <HeroText>
           <h1>Hiába keresel nem találsz szakembert?</h1>
           <p>
             Tégy egy probát nálunk, garantáljuk hogy itt megtalálod azt mester
             akire most szükséged van
           </p>
-        </HeroText>
         <SearchBar onSearchProviders={searchProvidersHandler} />
       </ScreenHeader>
       <section className={classes.providers}>

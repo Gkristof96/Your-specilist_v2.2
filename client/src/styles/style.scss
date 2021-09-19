@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: clamp(8px,3vw,16px);
 }
 
 body {
@@ -20,4 +20,25 @@ body {
   background-position: top;
   position: absolute;
   z-index: -10;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $light-text;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $input-border;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $purple;
+  border-radius: 5px;
 }

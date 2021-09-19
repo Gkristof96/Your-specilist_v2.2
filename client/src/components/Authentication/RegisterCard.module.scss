@@ -100,7 +100,7 @@
 
 @media screen and(max-width: 450px) {
   .register-card {
-    width: calc(100% - 20px);
+    width: calc(100% - $headline);
     margin-top: 100px;
     form .checkbox span {
       font-size: $caption;

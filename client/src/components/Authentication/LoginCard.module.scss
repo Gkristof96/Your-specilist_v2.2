@@ -41,7 +41,7 @@
       display: flex;
       flex-direction: column;
       font-weight: 500;
-      font-size: 14px;
+      font-size: $body;
       margin: 10px 0;
     }
     .checkbox {
@@ -99,7 +99,7 @@
 
 @media screen and(max-width: 450px) {
   .login-card {
-    width: calc(100% - 20px);
+    width: calc(100% - $headline);
     form .checkbox span {
       font-size: $caption;
     }
