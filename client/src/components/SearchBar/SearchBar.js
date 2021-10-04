@@ -23,9 +23,12 @@ const SearchBar = (props) => {
   const { professions } = getProfession;
 
   useEffect(() => {
-    dispatch(getCityData());
-    dispatch(getProfessionData());
-  }, [dispatch]);
+    if(cities.length === 0 || professions.length === 0) {
+      dispatch(getCityData());
+      dispatch(getProfessionData());
+    }
+    // eslint-disable-next-line
+  }, []);
 
   const searchHandler = () => {
     props.onSearchProviders(city, profession);

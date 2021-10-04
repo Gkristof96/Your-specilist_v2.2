@@ -8,7 +8,6 @@ const Layout = (props) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
   const toggleDrawerHandler = () => setIsDrawerOpen((prevIsDrawerOpen) => !prevIsDrawerOpen)
-  console.log(isDrawerOpen)
 
   return (
     <Fragment>

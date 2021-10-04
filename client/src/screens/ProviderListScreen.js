@@ -36,7 +36,6 @@ const ProvidersListScreen = () => {
       setKeyword({ city: "", profession: "" });
     }
     dispatch(listProviders(pageNumber, keyword));
-    console.log(location);
   }, [dispatch, pageNumber, keyword, location]);
 
   const searchProvidersHandler = (city, profession) => {

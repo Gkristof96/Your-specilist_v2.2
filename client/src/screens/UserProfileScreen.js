@@ -34,7 +34,7 @@ const UserProfileScreen = () => {
 
   useEffect(() => {
     if (!userInfo) {
-      history.push("/login");
+      history.push("/auth");
     } else {
       dispatch(getUserData(userInfo._id));
     }
