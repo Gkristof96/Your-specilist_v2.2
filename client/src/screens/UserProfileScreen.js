@@ -7,7 +7,7 @@ import {
   FaSignOutAlt,
 } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import classes from "./UserProfileScreen.module.scss";
+import classes from "./UserProfileScreen.module.css";
 
 import Loader from "../components/UI/Loader";
 import IconButton from "../components/UI/Buttons/IconButton";
@@ -50,28 +50,28 @@ const UserProfileScreen = () => {
 
   return (
     <Fragment>
-      <ScreenHeader className="medium-bg" />
-      <ScreenContent alignment="vertical" padding="medium-padding">
-        {error && <Message message={error} type="error" />}
+      <ScreenHeader className='medium-bg' />
+      <ScreenContent alignment='vertical' padding='medium-padding'>
+        {error && <Message message={error} type='error' />}
         {loading ? (
-          <Loader size="large" />
+          <Loader size='large' />
         ) : (
           <Fragment>
             <ProfileHeader provider={provider} />
             <ButtonContainer>
-              <IconButton buttonText="Hamarosan!">
+              <IconButton buttonText='Hamarosan!'>
                 <FaBriefcase className={classes.icon} />
               </IconButton>
-              <IconButton buttonText="Hamarosan!">
+              <IconButton buttonText='Hamarosan!'>
                 <FaCommentDots className={classes.icon} />
               </IconButton>
               <IconButton
-                buttonText="Beállítások"
+                buttonText='Beállítások'
                 onClick={redirectToEditHandler}
               >
                 <FaCog className={classes.icon} />
               </IconButton>
-              <IconButton buttonText="Kijelentkezés" onClick={logoutHandler}>
+              <IconButton buttonText='Kijelentkezés' onClick={logoutHandler}>
                 <FaSignOutAlt className={classes.icon} />
               </IconButton>
             </ButtonContainer>

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FaTimes } from "react-icons/fa";
 import { Link, useHistory } from "react-router-dom";
-import classes from "./RegisterCard.module.scss";
+import classes from "./RegisterCard.module.css";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
@@ -57,7 +57,7 @@ const RegisterCard = () => {
     <div className={classes["register-card"]}>
       <h1>Regisztráció</h1>
       <FaTimes className={classes.icon} onClick={closeRegisterHandler} />
-      {error && <Message type="error" message={error} />}
+      {error && <Message type='error' message={error} />}
       {loading && <Loader />}
       <Formik
         initialValues={initialValues}
@@ -67,36 +67,36 @@ const RegisterCard = () => {
         {(formik) => (
           <Form>
             <FormControl
-              control="input"
-              type="text"
-              label="Teljes név"
-              name="name"
+              control='input'
+              type='text'
+              label='Teljes név'
+              name='name'
             />
             <FormControl
-              control="input"
-              type="email"
-              label="Email"
-              name="email"
+              control='input'
+              type='email'
+              label='Email'
+              name='email'
             />
             <FormControl
-              control="input"
-              type="password"
-              label="Jelszó"
-              name="password"
+              control='input'
+              type='password'
+              label='Jelszó'
+              name='password'
             />
             <FormControl
-              control="input"
-              type="password"
-              label="Jelszó ismét"
-              name="cPassword"
+              control='input'
+              type='password'
+              label='Jelszó ismét'
+              name='cPassword'
             />
 
-            <Button type="submit">Küldés</Button>
+            <Button type='submit'>Küldés</Button>
           </Form>
         )}
       </Formik>
       <p>
-        Van már felhasználód? <Link to="/auth/login">Jelentkez be</Link>
+        Van már felhasználód? <Link to='/auth/login'>Jelentkez be</Link>
       </p>
     </div>
   );

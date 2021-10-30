@@ -1,0 +1,32 @@
+.modal {
+  padding: 25px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  background: #eee;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.modal h1 {
+  color: #49205c;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.modal p {
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    padding: 20px 30px;
+  }
+}

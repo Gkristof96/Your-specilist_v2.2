@@ -1,0 +1,50 @@
+.hamburger {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.hamburger .line {
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  background: #eeeeee;
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+}
+
+.hamburger .line:first-child,
+.hamburger .line:last-child {
+  width: 15px;
+}
+
+.hamburger .line:first-child {
+  top: 0;
+  left: 0;
+}
+.hamburger .line:nth-child(2) {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.hamburger .line:last-child {
+  bottom: 0;
+  right: 0;
+}
+.hamburger.ope .line:first-child {
+  transform: translateX(2px) translateY(8px) rotate(405deg);
+}
+
+.hamburger.ope .line:nth-child(2) {
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+.hamburger.ope .line:last-child {
+  transform: translateX(-2px) translateY(-8px) rotate(405deg);
+}

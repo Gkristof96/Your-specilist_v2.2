@@ -1,4 +1,4 @@
-import classes from "./Modal.module.scss";
+import classes from "./Modal.module.css";
 import { Fragment } from "react";
 import ReactDOM from "react-dom";
 import Backdrop from "./Backdrop";

@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { useHistory } from "react-router-dom";
-import classes from "./ErrorScreen.module.scss";
+import classes from "./ErrorScreen.module.css";
 
 import Button from "../components/UI/Buttons/Button";
 import ScreenContent from "../components/UI/ScreenContent";
@@ -15,7 +15,7 @@ const ErrorScreen = () => {
 
   return (
     <Fragment>
-      <ScreenHeader className="small-bg" />
+      <ScreenHeader className='small-bg' />
       <ScreenContent>
         <div className={classes.leftbar}>
           <h1>Hoppá! Úgy tűnik valami hiba történt.</h1>
@@ -27,7 +27,7 @@ const ErrorScreen = () => {
           <Button onClick={routeRedirectHandler}>Főoldalra</Button>
         </div>
         <div className={classes.rightbar}>
-          <img src="/images/error.svg" alt="404" />
+          <img src='/images/error.svg' alt='404' />
         </div>
       </ScreenContent>
     </Fragment>

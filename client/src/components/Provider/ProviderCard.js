@@ -1,6 +1,6 @@
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
-import classes from "./ProviderCard.module.scss";
+import classes from "./ProviderCard.module.css";
 
 import Rating from "./Rating";
 import ProfessionBadge from "../Professions/ProfessionBadge";
@@ -23,7 +23,7 @@ const ProviderCard = ({ provider }) => {
           <Rating
             value={provider.rating}
             numReviews={provider.numReviews}
-            size="small"
+            size='small'
           />
         </div>
         <h2>
@@ -38,7 +38,7 @@ const ProviderCard = ({ provider }) => {
           {provider.professions.map((profession, index) => (
             <ProfessionBadge
               professionName={profession.name}
-              size="small"
+              size='small'
               key={index}
             />
           ))}

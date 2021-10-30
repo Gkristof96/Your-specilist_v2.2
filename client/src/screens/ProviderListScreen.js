@@ -1,7 +1,7 @@
 import { Fragment, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useLocation } from "react-router-dom";
-import classes from "./ProviderListScreen.module.scss";
+import classes from "./ProviderListScreen.module.css";
 
 import ScreenHeader from "../components/UI/ScreenHeader";
 import SearchBar from "../components/SearchBar/SearchBar";
@@ -44,20 +44,20 @@ const ProvidersListScreen = () => {
 
   return (
     <Fragment>
-      <ScreenHeader className="large-bg">
-          <h1>Hiába keresel nem találsz szakembert?</h1>
-          <p>
-            Tégy egy probát nálunk, garantáljuk hogy itt megtalálod azt mester
-            akire most szükséged van
-          </p>
+      <ScreenHeader className='large-bg'>
+        <h1>Hiába keresel nem találsz szakembert?</h1>
+        <p>
+          Tégy egy probát nálunk, garantáljuk hogy itt megtalálod azt mester
+          akire most szükséged van
+        </p>
         <SearchBar onSearchProviders={searchProvidersHandler} />
       </ScreenHeader>
       <section className={classes.providers}>
         <div className={classes.container}>
           {loading ? (
-            <Loader size="large" />
+            <Loader size='large' />
           ) : error ? (
-            <Message margin="large" type="error" message={error} />
+            <Message margin='large' type='error' message={error} />
           ) : (
             <Fragment>
               {providers.map((provider, index) => (

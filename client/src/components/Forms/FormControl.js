@@ -3,7 +3,6 @@ import Checkbox from "./Checkbox";
 import Input from "./Input";
 import Select from "./Select";
 import Textarea from "./Textarea";
-import AutoInput from "./AutoInput";
 
 const FormControl = (props) => {
   const { control, ...rest } = props;
@@ -16,8 +15,6 @@ const FormControl = (props) => {
       return <Checkbox {...rest} />;
     case "select":
       return <Select {...rest} />;
-    case "autoinput":
-      return <AutoInput {...rest} />;
     default:
       return null;
   }

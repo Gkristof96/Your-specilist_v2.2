@@ -21,7 +21,7 @@ import Gallery from "../components/Profile/Gallery";
 import RatingForm from "../components/Profile/RatingForm";
 import ButtonContainer from "../components/Profile/ButtonContainer";
 import IconButton from "../components/UI/Buttons/IconButton";
-import classes from "./ProviderProfileScreen.module.scss";
+import classes from "./ProviderProfileScreen.module.css";
 
 const ProviderProfilScreen = ({ match }) => {
   let { path, url } = useRouteMatch();
@@ -50,22 +50,22 @@ const ProviderProfilScreen = ({ match }) => {
 
   return (
     <Fragment>
-      <ScreenHeader className="medium-bg" />
-      <ScreenContent padding="medium-padding" alignment="vertical">
-        {error && <Message message={error} type="error" />}
+      <ScreenHeader className='medium-bg' />
+      <ScreenContent padding='medium-padding' alignment='vertical'>
+        {error && <Message message={error} type='error' />}
         {loading ? (
-          <Loader size="large" />
+          <Loader size='large' />
         ) : (
           <Fragment>
             <ProfileHeader provider={provider} />
             <Switch>
               <Route path={path} exact>
                 <ButtonContainer>
-                  <IconButton buttonText="Hamarosan!">
+                  <IconButton buttonText='Hamarosan!'>
                     <FaTag className={classes.icon} />
                   </IconButton>
                   <IconButton
-                    buttonText="Értékeld a munkám"
+                    buttonText='Értékeld a munkám'
                     onClick={redirectToRatingHandler}
                   >
                     <FaAward className={classes.icon} />
@@ -77,7 +77,7 @@ const ProviderProfilScreen = ({ match }) => {
               <Route path={`${path}/rating`}>
                 <ButtonContainer>
                   <IconButton
-                    buttonText="A vissza a szakember profiljára"
+                    buttonText='A vissza a szakember profiljára'
                     onClick={redirectBackHandler}
                   >
                     <FaArrowAltCircleLeft className={classes.icon} />

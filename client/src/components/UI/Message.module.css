@@ -1,0 +1,43 @@
+.message-container {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 0 15px;
+  margin-bottom: 5px;
+}
+
+.message-container .error {
+  font-size: 0.7rem;
+  color: #ff3333;
+  font-weight: 400;
+}
+.message-container .standard {
+  font-size: 1.2rem;
+  color: #0275db;
+  font-weight: 500;
+}
+.message-container .icon {
+  font-size: 2.1rem;
+  color: #ff3333;
+  margin-right: 5px;
+}
+.message-container .small {
+  margin: 10px 0;
+}
+.message-container .medium {
+  margin: 25px 0;
+}
+.message-container .large {
+  margin: 50px 0;
+}
+
+.standard {
+  background: #cce5ff;
+}
+
+.error {
+  background: #ffcccc;
+}

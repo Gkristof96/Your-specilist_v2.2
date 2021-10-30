@@ -1,0 +1,61 @@
+.profession-list {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.profession-list h1 {
+  margin: 25px 0;
+  font-size: clamp(0.7rem, 2vw, 24px);
+  color: #212121;
+}
+.profession-list .professions {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profession-list .professions a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 27px;
+  background: #49205c;
+  color: #eeeeee;
+  margin: 10px;
+  padding: 0.5rem 2rem;
+  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.profession-list .professions a:hover {
+  transform: scale(1.05);
+}
+.profession-list .back-arrow {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  font-size: 2.1rem;
+  color: #212121;
+  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: pointer;
+}
+
+.profession-list .back-arrow:hover {
+  transform: scale(1.1);
+  color: #49205c;
+}
+
+@media screen and (max-width: 1450px) {
+  .profession-list .professions a {
+    padding: 0.25rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .profession-list .back-arrow {
+    left: 15px;
+    top: 20px;
+  }
+}

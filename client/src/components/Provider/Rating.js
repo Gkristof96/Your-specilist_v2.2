@@ -1,5 +1,5 @@
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
-import classes from "./Rating.module.scss";
+import classes from "./Rating.module.css";
 
 const Rating = ({ value, numReviews }, props) => {
   return (

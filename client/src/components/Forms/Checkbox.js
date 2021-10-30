@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
-import classes from "./Form.module.scss";
+import classes from "./Form.module.css";
 
 const Checkbox = (props) => {
   const { label, name, options, ...rest } = props;
@@ -14,7 +14,7 @@ const Checkbox = (props) => {
             return (
               <Fragment key={option.key}>
                 <input
-                  type="checkbox"
+                  type='checkbox'
                   id={option.value}
                   {...field}
                   value={option.value}

@@ -4,7 +4,7 @@ import { FaTimes } from "react-icons/fa";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { Link, useHistory } from "react-router-dom";
-import classes from "./LoginCard.module.scss";
+import classes from "./LoginCard.module.css";
 
 import Loader from "../UI/Loader";
 import Message from "../UI/Message";
@@ -46,7 +46,7 @@ const LoginCard = () => {
     <div className={classes["login-card"]}>
       <h1>Bejelentkezés</h1>
       <FaTimes className={classes.icon} onClick={closeLoginHandler} />
-      {error && <Message type="error" message={error} />}
+      {error && <Message type='error' message={error} />}
       {loading && <Loader />}
       <Formik
         initialValues={initialValues}
@@ -56,16 +56,16 @@ const LoginCard = () => {
         {(formik) => (
           <Form>
             <FormControl
-              control="input"
-              type="email"
-              label="Email"
-              name="email"
+              control='input'
+              type='email'
+              label='Email'
+              name='email'
             />
             <FormControl
-              control="input"
-              type="password"
-              label="Jelszó"
-              name="password"
+              control='input'
+              type='password'
+              label='Jelszó'
+              name='password'
             />
             {/*<div className='login-settings'>
                     <label>
@@ -76,12 +76,12 @@ const LoginCard = () => {
                         elfelejtett jelszó
                     </Link>
                 </div>*/}
-            <Button type="submit">Küldés</Button>
+            <Button type='submit'>Küldés</Button>
           </Form>
         )}
       </Formik>
       <p>
-        Nincs még felhasználód? <Link to="/auth/signup">Regisztrálj</Link> most!
+        Nincs még felhasználód? <Link to='/auth/signup'>Regisztrálj</Link> most!
       </p>
     </div>
   );

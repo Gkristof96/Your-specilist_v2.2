@@ -3,7 +3,7 @@ import axios from "axios";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import classes from "./ContactScreen.module.scss";
+import classes from "./ContactScreen.module.css";
 
 import Modal from "../components/UI/Modal";
 import Loader from "../components/UI/Loader";
@@ -57,7 +57,7 @@ const ContactScreen = () => {
     <Fragment>
       {isModalOpen && (
         <Modal onClose={closeModalHandler}>
-          {loading && <Loader size="large" />}
+          {loading && <Loader size='large' />}
           {!loading && (
             <Fragment>
               <h1>Köszönjük a levelet!</h1>
@@ -68,7 +68,7 @@ const ContactScreen = () => {
         </Modal>
       )}
 
-      <ScreenHeader className="small-bg" />
+      <ScreenHeader className='small-bg' />
       <ScreenContent>
         <div className={classes.leftbar}>
           <h1>Írj nekünk!</h1>
@@ -102,19 +102,19 @@ const ContactScreen = () => {
             {(formik) => (
               <Form>
                 <FormControl
-                  control="input"
-                  type="text"
-                  label="Teljes név"
-                  name="name"
+                  control='input'
+                  type='text'
+                  label='Teljes név'
+                  name='name'
                 />
                 <FormControl
-                  control="input"
-                  type="email"
-                  label="Email"
-                  name="email"
+                  control='input'
+                  type='email'
+                  label='Email'
+                  name='email'
                 />
-                <FormControl control="textarea" label="Üzenet" name="message" />
-                <Button type="submit">Küldés</Button>
+                <FormControl control='textarea' label='Üzenet' name='message' />
+                <Button type='submit'>Küldés</Button>
               </Form>
             )}
           </Formik>

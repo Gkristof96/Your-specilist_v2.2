@@ -6,7 +6,7 @@ import * as Yup from "yup";
 
 import ScreenHeader from "../components/UI/ScreenHeader";
 import ScreenContent from "../components/UI/ScreenContent";
-import classes from "./OfferScreen.module.scss";
+import classes from "./OfferScreen.module.css";
 import Button from "../components/UI/Buttons/Button";
 import Modal from "../components/UI/Modal";
 import Loader from "../components/UI/Loader";
@@ -67,7 +67,7 @@ const OfferScreen = () => {
     <>
       {isModalOpen && (
         <Modal onClose={closeModalHandler}>
-          {loading && <Loader size="large" />}
+          {loading && <Loader size='large' />}
           {!loading && (
             <Fragment>
               <h1>Köszönjük a levelet!</h1>
@@ -77,12 +77,12 @@ const OfferScreen = () => {
           )}
         </Modal>
       )}
-      <ScreenHeader className="large-bg">
-          <h1>Nem akarsz keresgélni?</h1>
-          <p>
-            Ebben az esetben adj fel egy megbízást, és majd egy szakember
-            megkeres az ajánlatával
-          </p>
+      <ScreenHeader className='large-bg'>
+        <h1>Nem akarsz keresgélni?</h1>
+        <p>
+          Ebben az esetben adj fel egy megbízást, és majd egy szakember megkeres
+          az ajánlatával
+        </p>
       </ScreenHeader>
       <ScreenContent flexstart>
         <div className={classes.leftbar}>
@@ -105,35 +105,35 @@ const OfferScreen = () => {
             {(formik) => (
               <Form>
                 <FormControl
-                  control="input"
-                  type="text"
-                  label="Teljes név"
-                  name="name"
+                  control='input'
+                  type='text'
+                  label='Teljes név'
+                  name='name'
                 />
                 <FormControl
-                  control="input"
-                  type="email"
-                  label="Email"
-                  name="email"
+                  control='input'
+                  type='email'
+                  label='Email'
+                  name='email'
                 />
                 <FormControl
-                  control="input"
-                  type="text"
-                  label="Város"
-                  name="city"
+                  control='input'
+                  type='text'
+                  label='Város'
+                  name='city'
                 />
                 <FormControl
-                  control="input"
-                  type="text"
-                  label="Szakma"
-                  name="profession"
+                  control='input'
+                  type='text'
+                  label='Szakma'
+                  name='profession'
                 />
                 <FormControl
-                  control="textarea"
-                  label="Munka leírás"
-                  name="description"
+                  control='textarea'
+                  label='Munka leírás'
+                  name='description'
                 />
-                <Button type="submit">Küldés</Button>
+                <Button type='submit'>Küldés</Button>
               </Form>
             )}
           </Formik>

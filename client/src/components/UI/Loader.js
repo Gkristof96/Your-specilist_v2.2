@@ -1,11 +1,13 @@
-import classes from "./Loader.module.scss";
+import classes from "./Loader.module.css";
 
 const Loader = (props) => {
   return (
-    <div className={`${classes["loader-container"]} ${classes[`${props.size}`]}`}>
+    <div
+      className={`${classes["loader-container"]} ${classes[`${props.size}`]}`}
+    >
       <img
-        src="/images/loader.webp"
-        alt="loader"
+        src='/images/loader.webp'
+        alt='loader'
         className={classes[`${props.size}`]}
       />
     </div>

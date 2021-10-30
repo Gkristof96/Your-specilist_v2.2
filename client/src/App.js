@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { Suspense } from "react";
-import "./styles/style.scss";
 
 import Layout from "./components/Layout/Layout";
 import Loader from "./components/UI/Loader";
@@ -27,36 +26,36 @@ const App = () => {
   return (
     <Router>
       <Layout>
-        <Suspense fallback={<Loader size="full" />}>
+        <Suspense fallback={<Loader size='full' />}>
           <Switch>
-            <Route path="/" exact>
+            <Route path='/' exact>
               <HomeScreen />
             </Route>
-            <Route path="/providers" exact>
+            <Route path='/providers' exact>
               <ProvidersListScreen />
             </Route>
-            <Route path="/providers/page/:pageNumber">
+            <Route path='/providers/page/:pageNumber'>
               <ProvidersListScreen />
             </Route>
-            <Route path="/provider/:id">
+            <Route path='/provider/:id'>
               <ProviderProfileScreen />
             </Route>
-            <Route path="/profile" exact>
+            <Route path='/profile' exact>
               <UserProfileScreen />
             </Route>
-            <Route path="/profile/edit">
+            <Route path='/profile/edit'>
               <ProfileEditScreen />
             </Route>
-            <Route path="/contact">
+            <Route path='/contact'>
               <ContactScreen />
             </Route>
-            <Route path="/offer">
+            <Route path='/offer'>
               <OfferScreen />
             </Route>
-            <Route path="/auth">
+            <Route path='/auth'>
               <AuthScreen />
             </Route>
-            <Route path="*">
+            <Route path='*'>
               <ErrorScreen />
             </Route>
           </Switch>

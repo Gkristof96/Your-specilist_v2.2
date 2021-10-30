@@ -1,6 +1,6 @@
 import React from "react";
 import { BiErrorCircle } from "react-icons/bi";
-import classes from "./Form.module.scss";
+import classes from "./Form.module.css";
 
 const TextError = (props) => {
   return (

@@ -1,4 +1,4 @@
-import classes from "./Button.module.scss";
+import classes from "./Button.module.css";
 
 const Button = (props) => {
   return (

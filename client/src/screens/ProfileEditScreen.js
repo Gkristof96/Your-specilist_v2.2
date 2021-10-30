@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Redirect, Route, Switch, useRouteMatch } from "react-router";
-import classes from "./ProfileEditScreen.module.scss";
+import classes from "./ProfileEditScreen.module.css";
 
 import ScreenContent from "../components/UI/ScreenContent";
 import ScreenHeader from "../components/UI/ScreenHeader";
@@ -15,8 +15,8 @@ const ProfileEditScreen = () => {
   let { path } = useRouteMatch();
   return (
     <Fragment>
-      <ScreenHeader className="small-bg" />
-      <ScreenContent padding="asimetric-padding">
+      <ScreenHeader className='small-bg' />
+      <ScreenContent padding='asimetric-padding'>
         <div className={classes["edit-menu"]}>
           <EditPageNavigation />
         </div>

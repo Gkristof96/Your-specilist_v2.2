@@ -1,4 +1,4 @@
-import classes from "./Description.module.scss";
+import classes from "./Description.module.css";
 
 const Description = (props) => {
   return (

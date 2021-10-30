@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import classes from "./PasswordEdit.module.scss";
+import classes from "./PasswordEdit.module.css";
 
 import Button from "../../UI/Buttons/Button";
 import Loader from "../../UI/Loader";
@@ -61,7 +61,7 @@ const PasswordEdit = () => {
     <Fragment>
       {isModalOpen && (
         <Modal onClose={closeModalHandler}>
-          {loading && <Loader size="large" />}
+          {loading && <Loader size='large' />}
           {!loading && (
             <Fragment>
               <h1>Jelszó változtatás sikeres!</h1>
@@ -85,16 +85,16 @@ const PasswordEdit = () => {
             />
             <h1 className={classes.name}>{provider.name}</h1>
             <label className={classes.label}>Régi Jelszó</label>
-            <FormControl control="input" type="password" name="oldPassword" />
+            <FormControl control='input' type='password' name='oldPassword' />
             <label className={classes.label}>Új Jelszó</label>
-            <FormControl control="input" type="password" name="newPassword" />
+            <FormControl control='input' type='password' name='newPassword' />
             <label className={classes.label}>Új Jelszó újra</label>
             <FormControl
-              control="input"
-              type="password"
-              name="confirmPassword"
+              control='input'
+              type='password'
+              name='confirmPassword'
             />
-            <Button type="submit">Mentés</Button>
+            <Button type='submit'>Mentés</Button>
           </Form>
         )}
       </Formik>

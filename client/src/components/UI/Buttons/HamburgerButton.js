@@ -1,4 +1,4 @@
-import { line, hamburger, open } from "./HamburgerButton.module.scss";
+import { line, hamburger, open } from "./HamburgerButton.module.css";
 
 const HamburgerButton = (props) => {
   return (

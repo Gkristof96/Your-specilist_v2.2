@@ -1,19 +1,19 @@
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
-import style from "./EditPageNavigation.module.scss";
+import style from "./EditPageNavigation.module.css";
 
 const EditPageNavigation = () => {
   return (
     <Fragment>
       <NavLink
-        to="/profile/edit/personal"
+        to='/profile/edit/personal'
         activeClassName={style.active}
         className={style["link-btn"]}
       >
         Profil beállítása
       </NavLink>
       <NavLink
-        to="/profile/edit/professions"
+        to='/profile/edit/professions'
         activeClassName={style.active}
         className={style["link-btn"]}
       >
@@ -25,7 +25,7 @@ const EditPageNavigation = () => {
           activeClassName={style.active} className={style['link-btn']}
   >Galléria feltöltése</NavLink>*/}
       <NavLink
-        to="/profile/edit/password"
+        to='/profile/edit/password'
         activeClassName={style.active}
         className={style["link-btn"]}
       >
@@ -35,7 +35,7 @@ const EditPageNavigation = () => {
           to='/profile/edit/removal'
           activeClassName={style.active} className={style['link-btn']}
       >Felhasználó törlése</NavLink>*/}
-      <Link to="/profile" className={style["link-btn"]}>
+      <Link to='/profile' className={style["link-btn"]}>
         Vissza a profilodhoz
       </Link>
     </Fragment>

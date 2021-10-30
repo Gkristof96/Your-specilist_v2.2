@@ -1,0 +1,21 @@
+.rating {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.rating .rating-stars span {
+  font-size: 1.4rem;
+}
+.rating .rating-text {
+  font-size: 0.8rem;
+  color: #212121;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .rating {
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+}

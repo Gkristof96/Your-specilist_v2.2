@@ -1,4 +1,4 @@
-import classes from "./ScreenHeader.module.scss";
+import classes from "./ScreenHeader.module.css";
 
 const ScreenHeader = (props) => {
   return (

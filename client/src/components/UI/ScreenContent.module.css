@@ -1,0 +1,78 @@
+.content {
+  width: 100%;
+  background: #e3e3e3;
+}
+
+.content .container {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 750px;
+  height: auto;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 calc((100vw - 1400px) / 2);
+  display: flex;
+  align-items: center;
+  transform: translateY(-75px);
+  background: #ffffff;
+}
+
+.content .container.vertical {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.content .container.horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+}
+.content .container.large-padding {
+  padding: 100px;
+}
+.content .container.medium-padding {
+  padding: 50px;
+}
+.content .container.asimetric-padding {
+  padding: 100px 50px;
+}
+.content .container.position {
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 1450px) {
+  .content {
+    padding: 0 25px;
+  }
+  .content .container {
+    max-width: unset;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content .container.horizontal {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .content {
+    padding: 0 10px;
+  }
+
+  .content .container {
+    padding: 0 50px;
+  }
+
+  .content .container.large-padding {
+    padding: 50px 25px;
+  }
+  .content .container.medium-padding {
+    padding: 10px 25px;
+  }
+  .content .container.asimetric-padding {
+    padding: 50px 25px;
+  }
+  .content .container.position {
+    align-items: flex-start;
+  }
+}

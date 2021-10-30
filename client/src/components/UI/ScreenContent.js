@@ -1,4 +1,4 @@
-import classes from "./ScreenContent.module.scss";
+import classes from "./ScreenContent.module.css";
 
 const ScreenContent = (props) => {
   return (

@@ -1,4 +1,4 @@
-import classes from "./ProfessionCategoryCard.module.scss";
+import classes from "./ProfessionCategoryCard.module.css";
 
 const ProfessionCategoryCard = (props) => {
   const chooseCategoryHandler = () => {

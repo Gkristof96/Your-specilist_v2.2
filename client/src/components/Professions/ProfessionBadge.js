@@ -1,4 +1,4 @@
-import classes, { action } from "./ProfessionBadge.module.scss";
+import classes, { action } from "./ProfessionBadge.module.css";
 
 const ProfessionBadge = (props) => {
   const chooseProfessionHandler = () => {

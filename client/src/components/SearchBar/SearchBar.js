@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FaSearch } from "react-icons/fa";
-import classes from "./SearchBar.module.scss";
+import classes from "./SearchBar.module.css";
 
 import AutocompleteInput from "./AutocompleteInput";
 
@@ -23,7 +23,7 @@ const SearchBar = (props) => {
   const { professions } = getProfession;
 
   useEffect(() => {
-    if(cities.length === 0 || professions.length === 0) {
+    if (cities.length === 0 || professions.length === 0) {
       dispatch(getCityData());
       dispatch(getProfessionData());
     }
@@ -39,13 +39,13 @@ const SearchBar = (props) => {
       <AutocompleteInput
         setInput={cityInputHandler}
         items={cities}
-        placeholder="Települések"
+        placeholder='Települések'
         value={city}
       />
       <AutocompleteInput
         setInput={professionInputHandler}
         items={professions}
-        placeholder="Szakma"
+        placeholder='Szakma'
         value={profession}
       />
       <span onClick={searchHandler}>

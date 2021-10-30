@@ -1,0 +1,52 @@
+.leftbar {
+  width: 50%;
+}
+
+.leftbar h1 {
+  font-weight: 500;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.leftbar p {
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-align: justify;
+  margin-bottom: 25px;
+}
+.leftbar li {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+.leftbar li .icon {
+  margin-right: 15px;
+  font-size: 2.1rem;
+}
+
+.rightbar {
+  width: 50%;
+}
+
+.rightbar form {
+  width: 60%;
+  margin: auto;
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .leftbar,
+  .rightbar {
+    width: 100%;
+  }
+  .rightbar form {
+    width: 90%;
+  }
+  .leftbar {
+    margin-bottom: 25px;
+  }
+}

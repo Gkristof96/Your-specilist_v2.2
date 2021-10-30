@@ -1,4 +1,4 @@
-import classes from "./ErrorModal.module.scss";
+import classes from "./ErrorModal.module.css";
 import ReactDOM from "react-dom";
 import { Fragment } from "react";
 import { VscChromeClose } from "react-icons/vsc";

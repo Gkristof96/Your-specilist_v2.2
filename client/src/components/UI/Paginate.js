@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import classes from "./Paginate.module.scss";
+import classes from "./Paginate.module.css";
 
 const Paginate = ({ pages, page, keyword }) => {
   const { city, profession } = keyword;

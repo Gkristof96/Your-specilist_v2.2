@@ -1,0 +1,93 @@
+.auto-input {
+  width: 100%;
+  position: relative;
+}
+
+.auto-input input {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: #f7f7f7;
+  border: 1px solid #aaaaaa;
+  padding: 15px;
+  font-size: 1.2rem;
+  outline: none;
+}
+.auto-input.small {
+  height: 40px;
+  width: 100%;
+  padding: 0;
+}
+.auto-input.large {
+  height: 75px;
+  width: 100%;
+  padding-right: 12px;
+}
+.auto-input ul {
+  position: absolute;
+  left: 0;
+  z-index: 20;
+  list-style: none;
+  border-radius: 10px;
+  background: #f7f7f7;
+  padding: 5px 0;
+  border: 1px solid #aaaaaa;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.auto-input ul li {
+  background: #f7f7f7;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 10px;
+}
+.auto-input ul li:hover {
+  background: #aaaaaa;
+}
+.auto-input ul li:first-child {
+  margin-top: 0;
+}
+
+.auto-input ul.small {
+  width: 100%;
+  top: 45px;
+}
+.auto-input ul.large {
+  width: calc(100% - 12px);
+  top: 80px;
+}
+
+.auto-input ::-webkit-scrollbar {
+  width: 15px;
+}
+.auto-input ::-webkit-scrollbar-track {
+  background: #eeeeee;
+  border-radius: 0 10px 10px 0;
+}
+.auto-input ::-webkit-scrollbar-thumb {
+  background: #f7f7f7;
+  border-radius: 0 10px 10px 0;
+}
+.auto-input ::-webkit-scrollbar-thumb:hover {
+  background: #49205c;
+}
+
+@media screen and (max-width: 450px) {
+  .auto-input.small {
+    height: 40px;
+  }
+  .auto-input.large {
+    height: 50px;
+  }
+  .auto-input input {
+    font-size: 0.8rem;
+  }
+  .auto-input ul {
+    top: 55px;
+  }
+  .auto-input ul li {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}

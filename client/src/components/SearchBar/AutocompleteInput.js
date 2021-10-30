@@ -1,5 +1,5 @@
 import { useState } from "react";
-import classes from "./AutocompleteInput.module.scss";
+import classes from "./AutocompleteInput.module.css";
 
 const AutocompleteInput = (props) => {
   const [suggestions, setSuggestions] = useState([]);
@@ -36,7 +36,7 @@ const AutocompleteInput = (props) => {
       }`}
     >
       <input
-        type="text"
+        type='text'
         placeholder={props.placeholder}
         value={props.value}
         onChange={inputChangeHandler}

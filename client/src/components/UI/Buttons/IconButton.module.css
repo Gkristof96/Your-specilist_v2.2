@@ -1,0 +1,36 @@
+.circle-btn {
+  box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-radius: 25px;
+  background: #f7f7f7;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.circle-btn .btn-text {
+  display: none;
+  font-size: 1.4rem;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.circle-btn .icon-wrapper {
+  height: 100%;
+  width: 50px;
+  border-radius: 25px;
+  background: #49205c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 950px) {
+  .circle-btn:hover .btn-text {
+    display: block;
+    padding: 0 20px;
+    text-align: center;
+    color: #49205c;
+  }
+}

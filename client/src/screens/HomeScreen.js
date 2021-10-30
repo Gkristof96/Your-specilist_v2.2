@@ -1,7 +1,7 @@
 import { Fragment, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import classes from "./HomeScreen.module.scss";
+import classes from "./HomeScreen.module.css";
 
 import ScreenHeader from "../components/UI/ScreenHeader";
 import SearchBar from "../components/SearchBar/SearchBar";
@@ -57,8 +57,8 @@ const HomeScreen = () => {
           </Fragment>
         </ErrorModal>
       )}
-      <ScreenHeader className="large-bg">
-        <h1 className="">Hiába keresel nem találsz szakembert?</h1>
+      <ScreenHeader className='large-bg'>
+        <h1 className=''>Hiába keresel nem találsz szakembert?</h1>
         <p>
           Tégy egy probát nálunk, garantáljuk hogy itt megtalálod azt mester
           akire most szükséged van
@@ -73,7 +73,7 @@ const HomeScreen = () => {
           kategóriák bőveb áttekintéséért kattints a kategória képére.
         </p>
         {loading ? (
-          <Loader size="large" />
+          <Loader size='large' />
         ) : showList ? (
           <ProfessionList data={listData} setShowList={setShowList} />
         ) : (

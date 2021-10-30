@@ -1,0 +1,114 @@
+.provider-card {
+  transform: translateX(150px);
+  background-color: #ffffff;
+  width: calc(100% - 150px);
+  height: auto;
+  min-height: 350px;
+  padding: 25px;
+  padding-left: 175px;
+  margin-bottom: 50px;
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.provider-card:hover {
+  transform: scale(1.025) translateX(150px);
+}
+.provider-card img {
+  width: 300px;
+  border-radius: 50%;
+  position: absolute;
+  border: 5px solid #f7f7f7;
+  left: -150px;
+  top: 25px;
+}
+.provider-card .provider-info {
+  padding-left: 25px;
+}
+
+.provider-card .provider-info .header {
+  display: flex;
+  align-items: center;
+}
+
+.provider-card .provider-info .header h1 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 29px;
+
+  color: #49205c;
+  margin-bottom: 5px;
+}
+.provider-card .provider-info .header .rating {
+  display: flex;
+  align-items: center;
+  color: #212121;
+}
+.provider-card .provider-info .header .rating .rating-stars {
+  margin: 0 10px;
+}
+.provider-card .provider-info .header .rating span {
+  font-size: 0.8rem;
+}
+.provider-card .provider-info h2 {
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 17px;
+  color: #49205c;
+
+  margin-bottom: 20px;
+}
+.provider-card .provider-info h2 .icon {
+  margin-right: 5px;
+  color: #49205c;
+}
+.provider-card .provider-info p {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #212121;
+  line-height: 1.2rem;
+  text-align: justify;
+  margin-bottom: 25px;
+  max-height: 135px;
+  overflow: hidden;
+}
+.provider-card .provider-info .professions-bar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .provider-card {
+    width: 100%;
+    height: auto;
+    transform: translateX(0);
+    padding: 25px;
+    flex-direction: column;
+  }
+
+  .provider-card img {
+    width: 200px;
+    position: relative;
+    top: unset;
+    left: unset;
+    align-self: center;
+  }
+  .provider-card .provider-info {
+    width: 100%;
+    padding-left: 0;
+  }
+  .provider-card .header,
+  .provider-card h2 {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .provider-card .provider-info .header .rating {
+    flex-direction: column;
+  }
+}

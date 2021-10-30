@@ -1,7 +1,7 @@
 import { Fragment, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import classes from "./ProfessionDataEdit.module.scss";
+import classes from "./ProfessionDataEdit.module.css";
 
 import AutocompleteInput from "../../SearchBar/AutocompleteInput";
 import ProfessionBadge from "../../Professions/ProfessionBadge";
@@ -98,11 +98,11 @@ const ProfessionDataEdit = () => {
         <AutocompleteInput
           setInput={setProfession}
           items={professions}
-          placeholder="Szakma"
+          placeholder='Szakma'
           value={profession}
-          size="small"
+          size='small'
         />
-        <Button type="submit">Hozzáad</Button>
+        <Button type='submit'>Hozzáad</Button>
       </form>
     </Fragment>
   );

@@ -1,0 +1,46 @@
+.leftbar {
+  width: 50%;
+}
+
+.leftbar h1 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.leftbar p {
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-align: justify;
+  margin-bottom: 25px;
+}
+
+.rightbar {
+  width: 50%;
+  align-items: center;
+}
+
+.rightbar form {
+  margin: auto;
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .leftbar,
+  .rightbar {
+    width: 100%;
+  }
+
+  .rightbar form {
+    margin-top: 0;
+    width: 90%;
+  }
+
+  .leftbar {
+    margin-bottom: 25px;
+  }
+}

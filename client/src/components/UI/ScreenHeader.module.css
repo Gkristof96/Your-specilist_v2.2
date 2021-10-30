@@ -1,0 +1,53 @@
+.wrapper {
+  width: 100%;
+  background: transparent;
+
+  padding: 0 calc((100vw - 1400px) / 2);
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.wrapper h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: clamp(50px, 5vw, 80px);
+  color: #eeeeee;
+}
+.wrapper p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: clamp(25px, 5vw, 55px);
+
+  color: #eeeeee;
+}
+
+.large-bg {
+  height: 60vh;
+  min-height: 450px;
+}
+
+.medium-bg {
+  height: 45vh;
+  min-height: 375px;
+}
+
+.small-bg {
+  height: 25vh;
+  min-height: 250px;
+}
+
+.fullsize-bg {
+  height: 100vh;
+  min-height: 800px;
+}
+
+@media screen and (max-width: 1450px) {
+  .wrapper {
+    padding: 0 25px;
+  }
+}

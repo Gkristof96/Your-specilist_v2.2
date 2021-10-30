@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import classes from "./PersonalDataEdit.module.scss";
+import classes from "./PersonalDataEdit.module.css";
 
 import AutocompleteInput from "../../SearchBar/AutocompleteInput";
 import Button from "../../UI/Buttons/Button";
@@ -87,12 +87,12 @@ const PersonalDataEdit = () => {
       <img src={provider.image} alt={provider.name} />
       <label className={classes.picture}>
         Cseréld le a profilképed
-        <input type="file" onChange={(e) => uploadFileHandler} />
+        <input type='file' onChange={(e) => uploadFileHandler} />
         {isUpload && <Loader />}
       </label>
       <label>Név</label>
       <input
-        type="text"
+        type='text'
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
@@ -100,22 +100,22 @@ const PersonalDataEdit = () => {
       <AutocompleteInput
         setInput={setCity}
         items={cities}
-        placeholder="Települések"
+        placeholder='Települések'
         value={city}
-        size="small"
+        size='small'
       />
       <label>Telefonszám</label>
-      <input type="text" value={tel} onChange={(e) => setTel(e.target.value)} />
+      <input type='text' value={tel} onChange={(e) => setTel(e.target.value)} />
       <label>Email</label>
       <input
-        type="text"
+        type='text'
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <label className={classes.bio}>Bemutatkozás</label>
       <textarea value={bio} onChange={(e) => setBio(e.target.value)} />
 
-      <Button type="submit">Mentés</Button>
+      <Button type='submit'>Mentés</Button>
     </form>
   );
 };

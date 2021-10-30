@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import classes from "./ProfileHeader.module.scss";
+import classes from "./ProfileHeader.module.css";
 
 import Rating from "../Provider/Rating";
 import ProfessionBadge from "../Professions/ProfessionBadge";
@@ -18,7 +18,7 @@ const ProfileHeader = ({ provider }) => {
         <h1>{provider.name}</h1>
         <Rating
           value={provider.rating}
-          size="medium"
+          size='medium'
           numReviews={provider.numReviews}
         />
       </div>

@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import classes from "./RatingForm.module.scss";
+import classes from "./RatingForm.module.css";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
@@ -73,7 +73,7 @@ const RatingForm = (props) => {
     <Fragment>
       {isModalOpen && (
         <Modal onClose={closeModalHandler}>
-          {loading && <Loader size="large" />}
+          {loading && <Loader size='large' />}
           {!loading && (
             <Fragment>
               <h1>Értékelés rögzítve!</h1>
@@ -96,25 +96,25 @@ const RatingForm = (props) => {
           {(formik) => (
             <Form>
               <FormControl
-                control="input"
-                type="text"
-                label="Teljes név"
-                name="name"
+                control='input'
+                type='text'
+                label='Teljes név'
+                name='name'
               />
               <FormControl
-                control="input"
-                type="email"
-                label="Email"
-                name="email"
+                control='input'
+                type='email'
+                label='Email'
+                name='email'
               />
               <FormControl
-                control="select"
+                control='select'
                 options={ratingOptions}
-                label="Értékelés"
-                name="rating"
+                label='Értékelés'
+                name='rating'
               />
-              <FormControl control="textarea" label="Üzenet" name="message" />
-              <Button type="submit">Küldés</Button>
+              <FormControl control='textarea' label='Üzenet' name='message' />
+              <Button type='submit'>Küldés</Button>
             </Form>
           )}
         </Formik>
