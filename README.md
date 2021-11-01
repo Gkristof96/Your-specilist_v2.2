@@ -3,7 +3,6 @@
 ### Alkalmazott technológiák:
 * React
 * Redux
-* Sass
 * Node.js
 * Express
 * MongoDB
