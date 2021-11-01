@@ -9,7 +9,7 @@ import Loader from "../components/UI/Loader";
 import Message from "../components/UI/Message";
 import ProviderCard from "../components/Provider/ProviderCard";
 import Paginate from "../components/UI/Paginate";
-
+import ErrorModal from "../components/UI/Modals/ErrorModal";
 import { listProviders } from "../actions/providerActions";
 
 const ProvidersListScreen = () => {
@@ -19,6 +19,8 @@ const ProvidersListScreen = () => {
     city: queryParams.get("city") || "",
     profession: queryParams.get("profession") || "",
   });
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const dispatch = useDispatch();
   const param = useParams();
@@ -39,11 +41,28 @@ const ProvidersListScreen = () => {
   }, [dispatch, pageNumber, keyword, location]);
 
   const searchProvidersHandler = (city, profession) => {
-    setKeyword({ city: city, profession: profession });
+    if (profession === "" && city === "") {
+      setErrorMessage("Kérlek ad meg a települést és a szakmát amit keresel");
+      setModalOpen(true);
+    } else if (profession === "") {
+      setErrorMessage("A szakma mező kitöltése kötelező");
+      setModalOpen(true);
+    } else {
+      setKeyword({ city: city, profession: profession });
+    }
   };
+
+  const closeModalHandler = () => setModalOpen(false);
 
   return (
     <Fragment>
+      {isModalOpen && (
+        <ErrorModal onClose={closeModalHandler}>
+          <Fragment>
+            <p>{errorMessage}</p>
+          </Fragment>
+        </ErrorModal>
+      )}
       <ScreenHeader className='large-bg'>
         <h1>Hiába keresel nem találsz szakembert?</h1>
         <p>
